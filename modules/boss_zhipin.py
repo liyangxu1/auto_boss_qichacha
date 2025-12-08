@@ -624,6 +624,121 @@ class BossZhipinClient:
             logger.error(f'保存职位详情失败: {e}')
             return False
     
+    def click_start_chat(self, match_score: float = 0) -> bool:
+        """
+        点击"立即沟通"按钮
+        
+        Args:
+            match_score: 匹配度分数，用于日志记录
+            
+        Returns:
+            bool: 是否成功点击
+        """
+        try:
+            logger.info(f"匹配度为{match_score:.2f}%，尝试点击'立即沟通'按钮...")
+            
+            # 等待页面加载完成
+            self.page.wait_for_load_state('domcontentloaded')
+            time.sleep(2)  # 额外等待确保按钮可点击
+            
+            # 查找"立即沟通"按钮
+            # 根据用户提供的HTML结构，使用多种选择器尝试
+            selectors = [
+                'div.btn.btn-startchat-wrap a.btn.btn-startchat',
+                'a.btn.btn-startchat',
+                '.btn-startchat',
+                '[ka*="go_chat_done"]',
+                'a:has-text("立即沟通")',
+                'text="立即沟通"'
+            ]
+            
+            button_found = False
+            for selector in selectors:
+                try:
+                    button = self.page.locator(selector).first
+                    if button.count() > 0 and button.is_visible():
+                        logger.info(f"找到'立即沟通'按钮，使用选择器: {selector}")
+                        button_found = True
+                        
+                        # 滚动到按钮位置
+                        button.scroll_into_view_if_needed()
+                        time.sleep(1)
+                        
+                        # 点击按钮
+                        button.click()
+                        logger.info(f"成功点击'立即沟通'按钮！匹配度: {match_score:.2f}%")
+                        
+                        # 等待页面响应
+                        time.sleep(3)
+                        
+                        # 检查是否成功（可以添加更多的成功验证逻辑）
+                        return True
+                        
+                except Exception as e:
+                    logger.debug(f"选择器 {selector} 失败: {e}")
+                    continue
+            
+            if not button_found:
+                logger.warning("未找到'立即沟通'按钮，可能页面结构已变化")
+                # 保存页面HTML用于调试
+                try:
+                    with open('chat_button_debug.html', 'w', encoding='utf-8') as f:
+                        f.write(self.page.content())
+                    logger.info("已保存页面HTML到chat_button_debug.html")
+                except:
+                    pass
+                
+            return False
+            
+        except Exception as e:
+            logger.error(f"点击'立即沟通'按钮失败: {e}")
+            return False
+    
+    def get_job_detail_and_match(self, job_link: str, resume_info: Dict[str, Any], matcher) -> Dict[str, Any]:
+        """
+        获取职位详情并计算匹配度，如果匹配度高则自动点击"立即沟通"
+        
+        Args:
+            job_link: 职位链接
+            resume_info: 简历信息
+            matcher: 职位匹配器实例
+            
+        Returns:
+            Dict[str, Any]: 包含职位详情和匹配结果的信息
+        """
+        try:
+            # 获取职位详情
+            job_detail = self.get_job_detail(job_link)
+            if not job_detail:
+                logger.error("获取职位详情失败")
+                return None
+            
+            # 计算匹配度
+            match_result = matcher.calculate_overall_match(resume_info, job_detail)
+            
+            # 将匹配结果添加到职位详情中
+            job_detail['match_result'] = match_result
+            
+            # 如果匹配度>=80%，自动点击"立即沟通"
+            if match_result['overall_score'] >= 80:
+                logger.info(f"匹配度达到{match_result['overall_score']:.2f}%，符合自动沟通条件")
+                chat_success = self.click_start_chat(match_result['overall_score'])
+                job_detail['auto_chat_clicked'] = chat_success
+                
+                if chat_success:
+                    logger.info("已成功发起沟通！")
+                else:
+                    logger.warning("自动发起沟通失败，可能需要手动操作")
+            else:
+                logger.info(f"匹配度为{match_result['overall_score']:.2f}%，未达到自动沟通标准(80%)")
+                job_detail['auto_chat_clicked'] = False
+            
+            return job_detail
+            
+        except Exception as e:
+            logger.error(f"获取职位详情并匹配失败: {e}")
+            return None
+    
     def close(self):
         """
         关闭Playwright浏览器资源
