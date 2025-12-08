@@ -64,12 +64,16 @@ def main():
             extractor = AIKeywordExtractor()
             keywords = extractor.extract_keywords(resume_info['content'])
             if not keywords:
-                logger.warning('未提取到关键词，使用默认关键词')
-                keywords = ['Python开发工程师', 'AI应用开发', '机器学习', 'RAG']
+                logger.warning('未提取到关键词，使用大模型相关默认关键词')
+                keywords = ['RAG', 'Agent', 'AI工程师', '大模型', 'LLM', 'AIGC', '人工智能', '机器学习工程师', '深度学习', '自然语言处理', 'NLP']
+            else:
+                # 确保包含大模型相关关键词
+                ai_keywords = ['RAG', 'Agent', 'AI工程师', '大模型', 'LLM', 'AIGC', '人工智能', '机器学习工程师', '深度学习', '自然语言处理', 'NLP']
+                keywords.extend([kw for kw in ai_keywords if kw not in keywords])
             logger.info(f'AI提取的关键词: {keywords}')
         except Exception as e:
-            logger.error(f'AI关键词提取失败，使用默认关键词: {e}')
-            keywords = ['Python开发工程师', 'AI应用开发', '机器学习', 'RAG']
+            logger.error(f'AI关键词提取失败，使用大模型相关默认关键词: {e}')
+            keywords = ['RAG', 'Agent', 'AI工程师', '大模型', 'LLM', 'AIGC', '人工智能', '机器学习工程师', '深度学习', '自然语言处理', 'NLP']
         
         # 4. 创建职位匹配器
         logger.info('步骤4: 创建职位匹配器')
@@ -81,7 +85,7 @@ def main():
         all_job_details = []
         auto_chat_count = 0
         
-        # 使用多个关键词搜索
+        # 使用多个关键词搜索 - 使用大模型相关关键词
         for keyword in keywords[:3]:  # 只使用前3个关键词
             logger.info(f'搜索关键词: {keyword}')
             jobs = boss_client.search_jobs(keyword, city="北京", page=1)

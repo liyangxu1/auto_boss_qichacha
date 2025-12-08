@@ -697,6 +697,7 @@ class BossZhipinClient:
     def get_job_detail_and_match(self, job_link: str, resume_info: Dict[str, Any], matcher) -> Dict[str, Any]:
         """
         获取职位详情并计算匹配度，如果匹配度高则自动点击"立即沟通"
+        优先检查学历和工作经验要求，不满足直接跳过
         
         Args:
             job_link: 职位链接
@@ -713,7 +714,66 @@ class BossZhipinClient:
                 logger.error("获取职位详情失败")
                 return None
             
-            # 计算匹配度
+            # 优先检查学历要求
+            education_requirement = job_detail.get('education', '').lower()
+            candidate_education = resume_info.get('education', '').lower()
+            
+            # 定义学历层级
+            education_levels = {
+                '不限': 0,
+                '大专': 1, '专科': 1,
+                '本科': 2, '学士': 2,
+                '硕士': 3, '研究生': 3,
+                '博士': 4
+            }
+            
+            # 检查学历是否满足要求
+            job_education_level = education_levels.get(education_requirement, 2)  # 默认本科
+            candidate_education_level = education_levels.get(candidate_education, 2)  # 默认本科
+            
+            if candidate_education_level < job_education_level:
+                logger.info(f"学历不匹配：职位要求{education_requirement}，候选人学历{candidate_education}，跳过")
+                return None
+            
+            # 检查工作经验要求
+            experience_text = job_detail.get('experience', '')
+            candidate_experience = resume_info.get('experience_years', 0)
+            
+            # 提取职位要求的工作年限
+            import re
+            
+            # 记录原始经验文本用于调试
+            logger.info(f"开始检查工作经验：职位经验要求文本='{experience_text}'，候选人经验{candidate_experience}年")
+            
+            # 匹配各种经验格式：3-5年、1年以上、不限、应届生等
+            if not experience_text or '不限' in experience_text or '应届生' in experience_text:
+                logger.info("职位经验要求为'不限'或'应届生'，跳过经验检查")
+            else:
+                # 尝试匹配范围格式：3-5年、1-3年等
+                range_match = re.search(r'(\d+)-\s*(\d+)', experience_text)
+                if range_match:
+                    min_years = int(range_match.group(1))
+                    max_years = int(range_match.group(2))
+                    logger.info(f"职位经验要求范围：{min_years}-{max_years}年")
+                    
+                    if candidate_experience < min_years:
+                        logger.info(f"经验不匹配：职位要求至少{min_years}年，候选人经验{candidate_experience}年，跳过")
+                        return None
+                else:
+                    # 匹配单个数字：3年以上、5年经验等
+                    single_match = re.search(r'(\d+)', experience_text)
+                    if single_match:
+                        required_years = int(single_match.group(1))
+                        logger.info(f"职位经验要求：至少{required_years}年")
+                        
+                        if candidate_experience < required_years:
+                            logger.info(f"经验不匹配：职位要求{required_years}年，候选人经验{candidate_experience}年，跳过")
+                            return None
+                    else:
+                        logger.warning(f"无法从经验文本'{experience_text}'中提取工作年限要求，跳过经验检查")
+            
+            # 学历和经验都满足，继续计算匹配度
+            logger.info("学历和经验要求满足，继续计算详细匹配度")
             match_result = matcher.calculate_overall_match(resume_info, job_detail)
             
             # 将匹配结果添加到职位详情中

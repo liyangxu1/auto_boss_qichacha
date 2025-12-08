@@ -1480,3 +1480,521 @@ playwright._impl._errors.TargetClosedError: Page.goto: Target page, context or b
 2025-12-08 11:10:17,270 - __main__ - INFO - 浏览器保持打开状态，请手动关闭
 2025-12-08 11:10:17,270 - __main__ - INFO - 程序已完成所有操作，按回车键退出...
 2025-12-08 11:10:19,699 - __main__ - INFO - 用户已手动退出程序
+2025-12-08 16:16:14,297 - __main__ - INFO - 开始执行Boss直聘职位搜索和自动沟通流程
+2025-12-08 16:16:14,297 - __main__ - INFO - 步骤1: 登录Boss直聘
+2025-12-08 16:16:15,130 - modules.boss_zhipin - INFO - Playwright浏览器初始化成功
+2025-12-08 16:16:15,130 - modules.boss_zhipin - INFO - 登录信息（Cookie）加载成功
+2025-12-08 16:16:15,131 - modules.boss_zhipin - INFO - 检测到保存的登录Cookie，尝试恢复登录状态
+2025-12-08 16:16:19,991 - modules.boss_zhipin - INFO - 打开Boss直聘首页成功
+2025-12-08 16:16:19,994 - modules.boss_zhipin - INFO - 已添加保存的Cookie
+2025-12-08 16:16:34,889 - modules.boss_zhipin - INFO - 登录成功（使用保存的Cookie）
+2025-12-08 16:16:34,890 - __main__ - INFO - 步骤2: 解析简历
+2025-12-08 16:16:34,949 - __main__ - INFO - 成功解析简历: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jianli\李阳旭-AI应用开发工程师-1年.pdf
+2025-12-08 16:16:34,950 - __main__ - INFO - 步骤3: AI提取搜索关键词
+2025-12-08 16:16:34,950 - modules.ai_keyword_extractor - ERROR - OPENAI_API_KEY环境变量未设置
+2025-12-08 16:16:34,950 - __main__ - ERROR - AI关键词提取失败，使用大模型相关默认关键词: OPENAI_API_KEY环境变量未设置
+2025-12-08 16:16:34,950 - __main__ - INFO - 步骤4: 创建职位匹配器
+2025-12-08 16:16:35,015 - modules.job_matcher - INFO - 使用模型: qwen3-next-80b-a3b-instruct
+2025-12-08 16:16:35,015 - __main__ - INFO - 步骤5: 搜索职位并计算匹配度
+2025-12-08 16:16:35,015 - __main__ - INFO - 搜索关键词: RAG
+2025-12-08 16:16:35,015 - modules.boss_zhipin - INFO - 开始搜索职位，关键词: RAG，城市: 北京，页码: 1
+2025-12-08 16:16:41,214 - modules.boss_zhipin - INFO - 模拟用户逐字输入关键词...
+2025-12-08 16:16:41,227 - modules.boss_zhipin - INFO - 使用定位器 //input[@placeholder="搜索职位、公司"] 找到搜索输入框
+2025-12-08 16:16:43,236 - modules.boss_zhipin - INFO - 模拟用户点击搜索按钮...
+2025-12-08 16:16:43,240 - modules.boss_zhipin - INFO - 使用定位器 //a[@ka="job_search_btn_click"] 找到搜索按钮
+2025-12-08 16:16:50,294 - modules.boss_zhipin - INFO - 提取搜索结果...
+2025-12-08 16:16:50,299 - modules.boss_zhipin - INFO - 使用定位器 li.job-card-box 找到 30 个职位卡片
+2025-12-08 16:16:50,330 - modules.boss_zhipin - INFO - 提取职位: ai应用工程师 - 华清未央
+2025-12-08 16:16:50,355 - modules.boss_zhipin - INFO - 提取职位: 智能体搭建工程师 - 启泰安全
+2025-12-08 16:16:50,380 - modules.boss_zhipin - INFO - 提取职位: AI大模型应用开发工程师 - 河南瑞临万道科技
+2025-12-08 16:16:50,404 - modules.boss_zhipin - INFO - 提取职位: 大模型算法工程师 - 某大型计算机软件公司
+2025-12-08 16:16:50,426 - modules.boss_zhipin - INFO - 提取职位: AI大模型研发工程师-26届校招 - 金智教育
+2025-12-08 16:16:50,450 - modules.boss_zhipin - INFO - 提取职位: 知识图谱RAG - 鼎捷数智
+2025-12-08 16:16:50,468 - modules.boss_zhipin - INFO - 提取职位: 大模型算法工程师 - 弘正
+2025-12-08 16:16:50,490 - modules.boss_zhipin - INFO - 提取职位: AI解决方案工程师 - 某中型大数据公司
+2025-12-08 16:16:50,510 - modules.boss_zhipin - INFO - 提取职位: 高级AI算法师 - 一目科技
+2025-12-08 16:16:50,533 - modules.boss_zhipin - INFO - 提取职位: 高级算法工程师 - 满帮集团
+2025-12-08 16:16:50,552 - modules.boss_zhipin - INFO - 提取职位: RAG方向工程师 - 南京时珍
+2025-12-08 16:16:50,573 - modules.boss_zhipin - INFO - 提取职位: 软件开发工程师 - 数衍数矩
+2025-12-08 16:16:50,594 - modules.boss_zhipin - INFO - 提取职位: AI大模型开发 - 软通动力
+2025-12-08 16:16:50,613 - modules.boss_zhipin - INFO - 提取职位: AI技术工程师 - 成都睿工智能控制技术
+2025-12-08 16:16:50,634 - modules.boss_zhipin - INFO - 提取职位: 大模型工程师（自研项目） - 南京诚迈智能信息...
+2025-12-08 16:16:50,652 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师(J10081) - 索辰科技
+2025-12-08 16:16:50,673 - modules.boss_zhipin - INFO - 提取职位: ai应用开发工程师 - 飞搏智慧
+2025-12-08 16:16:50,693 - modules.boss_zhipin - INFO - 提取职位: 高级VLM算法工程师 - 某中型智能硬件研发公司
+2025-12-08 16:16:50,713 - modules.boss_zhipin - INFO - 提取职位: AI实习生(RAG/Agent) - 凯易讯
+2025-12-08 16:16:50,734 - modules.boss_zhipin - INFO - 提取职位: Python工程师（AI开发方向） - 优泰科技
+2025-12-08 16:16:50,754 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师 - 玖壹叁陆零医学科技
+2025-12-08 16:16:50,776 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师 - 中车数字
+2025-12-08 16:16:50,796 - modules.boss_zhipin - INFO - 提取职位: ai智能体研发 - 元数科技
+2025-12-08 16:16:50,817 - modules.boss_zhipin - INFO - 提取职位: AI算法工程师（大模型方向） - 皓盘科技
+2025-12-08 16:16:50,835 - modules.boss_zhipin - INFO - 提取职位: 大模型微调工程师 - 南京迦之美
+2025-12-08 16:16:50,855 - modules.boss_zhipin - INFO - 提取职位: 算法工程师 - 南京集萃祀合可信数据
+2025-12-08 16:16:50,877 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师 - 比特微
+2025-12-08 16:16:50,898 - modules.boss_zhipin - INFO - 提取职位: 智能体开发实习生-南京 - 亚信科技
+2025-12-08 16:16:50,920 - modules.boss_zhipin - INFO - 提取职位: 算法研发工程师（应届生） - HyperAI
+2025-12-08 16:16:50,939 - modules.boss_zhipin - INFO - 提取职位: AI大模型/智能体Agent应用开发工程师 - 立趣
+2025-12-08 16:16:50,939 - modules.boss_zhipin - INFO - 搜索完成，找到30个相关职位
+2025-12-08 16:16:50,939 - __main__ - INFO - 关键词"RAG"找到30个职位
+2025-12-08 16:16:50,939 - __main__ - INFO - 开始处理前2个职位
+2025-12-08 16:16:50,939 - __main__ - INFO - 处理第1/2个职位: ai应用工程师
+2025-12-08 16:16:50,939 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/f633fd83f1b5ad1c03190t28EVVZ.html
+2025-12-08 16:16:57,016 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-08 16:16:57,031 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-08 16:16:57,032 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-08 16:16:57,038 - modules.boss_zhipin - INFO - 提取到职位标题: ai应用工程师
+2025-12-08 16:16:57,046 - modules.boss_zhipin - INFO - 提取到薪资: 200-400元/天
+2025-12-08 16:16:57,050 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-08 16:16:57,051 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-08 16:16:57,051 - modules.boss_zhipin - INFO - 成功提取职位详情: ai应用工程师 - 
+2025-12-08 16:16:57,051 - modules.boss_zhipin - INFO - 学历和经验要求满足，继续计算详细匹配度
+2025-12-08 16:17:05,002 - httpx - INFO - HTTP Request: POST https://api.tokenpony.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 16:17:05,007 - modules.job_matcher - INFO - AI匹配分析结果: {
+  "match_score": 92,
+  "skill_match": 95,
+  "experience_match": 90,
+  "education_match": 85,
+  "analysis": "该候选人与职位要求高度匹配。首先，在RAG方面，候选人有扎实的实战经验，主导开发了基于Milvus + Qwen-embedding + BGE-reranker的电商智能客服RAG系统，涵盖数据预处理、向量库构建、混合检索、Prompt工程和模型微调全流程，且有明确的评估指标（answer relevancy=0.844，准确率94.7%），完全满足职位第一条核心要求。其次，在AI应用开发平台方面，候选人熟练使用Dify和Coze搭建智能体和工作流，与职位要求的dify、n8n、langflow高度一致，虽未提及n8n和langflow，但Dify和Coze属于同类主流平台，学习迁移成本极低。在编程与工程能力上，候选人精通Python，具备Docker容器化部署经验（BERT模型部署）、异步服务开发能力（通过Flask构建服务）、集成测试经验（RAGAS评估+人工评估），完全符合第3条要求。在AI Coding工具方面，虽未明确提及Cursor或Claude Code，但其在项目中大量使用LLM进行Prompt工程、数据生成和模型微调，展现出对AI辅助开发的深度理解和实践，可视为间接匹配。教育背景为计算机本科在读（2025年毕业），学历符合要求，且有国家级竞赛奖项和奖学金，体现学习能力和创新思维。唯一轻微不足是未明确提及JavaScript和n8n/langflow的具体使用，但考虑到其AI应用开发经验的广度和深度，此为可快速弥补的边缘项。",
+  "recommendation": "强烈推荐投递该职位。候选人不仅满足所有核心要求，还在RAG和智能体开发方面展现出超出一般应届生的实战深度和项目成果，具备独立解决复杂AI工程问题的能力，是典型的高潜力AI应用开发人才。",
+  "matched_skills": [
+    "RAG系统开发与优化",
+    "Dify/Coze智能体平台使用",
+    "大模型SFT/LoRA微调",
+    "Python编程与工程化",
+    "Docker容器化部署",
+    "混合检索（BM25 + Embedding + Reranker）",
+    "Prompt工程",
+    "MCP协议与SQL自动生成",
+    "多意图路由与任务编排",
+    "AI辅助开发实践"
+  ],
+  "missing_skills": [
+    "JavaScript",
+    "n8n",
+    "langflow",
+    "Cursor",
+    "Claude Code"
+  ],
+  "strengths": [
+    "拥有多个高质量RAG和智能体落地项目，成果可量化",
+    "具备从数据预处理到模型部署的全栈AI应用开发能力",
+    "对前沿AI技术（MCP、A2A、Function Call）有实际应用经验",
+    "工程思维强，注重系统性能与用户体验优化",
+    "学习能力强，项目覆盖NLP、推荐、预测、客服等多个场景"
+  ],
+  "weaknesses": [
+    "尚未在简历中明确提及JavaScript开发经验",
+    "n8n和langflow工具未直接使用，但具备同类平台迁移能力",
+    "AI Coding工具（Cursor/Claude Code）未明确列出，但其工作方式已体现AI辅助开发思维"
+  ]
+}
+2025-12-08 16:17:05,007 - modules.job_matcher - INFO - AI匹配完成: 总体匹配度=92%, 建议=强烈推荐投递该职位。候选人不仅满足所有核心要求，还在RAG和智能体开发方面展现出超出一般应届生的实战深度和项目成果，具备独立解决复杂AI工程问题的能力，是典型的高潜力AI应用开发人才。
+2025-12-08 16:17:05,007 - modules.boss_zhipin - INFO - 匹配度达到92.00%，符合自动沟通条件
+2025-12-08 16:17:05,008 - modules.boss_zhipin - INFO - 匹配度为92.00%，尝试点击'立即沟通'按钮...
+2025-12-08 16:17:07,019 - modules.boss_zhipin - INFO - 找到'立即沟通'按钮，使用选择器: div.btn.btn-startchat-wrap a.btn.btn-startchat
+2025-12-08 16:17:08,069 - modules.boss_zhipin - INFO - 成功点击'立即沟通'按钮！匹配度: 92.00%
+2025-12-08 16:17:11,080 - modules.boss_zhipin - INFO - 已成功发起沟通！
+2025-12-08 16:17:11,080 - __main__ - INFO - 已自动发起沟通，当前总计: 1个职位
+2025-12-08 16:17:13,085 - __main__ - INFO - 处理第2/2个职位: 智能体搭建工程师
+2025-12-08 16:17:13,086 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/2f2b766b96e96b2303172N69FlZV.html
+2025-12-08 16:17:19,584 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-08 16:17:19,594 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-08 16:17:19,594 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-08 16:17:19,602 - modules.boss_zhipin - INFO - 提取到职位标题: 智能体搭建工程师
+2025-12-08 16:17:19,611 - modules.boss_zhipin - INFO - 提取到薪资: 12-16K
+2025-12-08 16:17:19,614 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-08 16:17:19,614 - modules.boss_zhipin - INFO - 成功提取职位详情: 智能体搭建工程师 - 
+2025-12-08 16:17:19,614 - modules.boss_zhipin - INFO - 学历和经验要求满足，继续计算详细匹配度
+2025-12-08 16:17:25,431 - httpx - INFO - HTTP Request: POST https://api.tokenpony.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 16:17:25,432 - modules.job_matcher - INFO - AI匹配分析结果: {
+  "match_score": 92,
+  "skill_match": 95,
+  "experience_match": 90,
+  "education_match": 85,
+  "analysis": "该候选人与AI应用开发工程师职位高度匹配。技能方面，他精通Python、大模型应用、SFT/LoRA微调、RAG系统构建、MCP协议、Function Call等核心技能，且在多个项目中独立完成从数据预处理、模型微调到系统部署的全流程，完全契合AI应用开发岗位的技术要求。经验方面，他在宝思利和正计通的两段AI算法/大模型相关工作，直接涉及智能体开发、RAG客服系统、多意图旅游助手等典型AI应用项目，具备扎实的工程落地能力。教育背景为计算机科学与技术本科在读（2025年毕业），年龄22岁，虽为应届生，但项目经验远超普通毕业生，且有国家级竞赛奖项和实际企业项目支撑，学历匹配度良好。唯一不足是尚未正式毕业，可能在部分企业招聘流程中存在时间冲突，但其项目深度和成果已具备准职场人水平。整体来看，该候选人技术扎实、项目丰富、成果可量化，是稀缺的高潜力AI应用型人才。",
+  "recommendation": "强烈推荐投递该职位",
+  "matched_skills": [
+    "Python",
+    "大模型应用",
+    "SFT微调",
+    "LoRA微调",
+    "RAG系统构建",
+    "MCP协议",
+    "Function Call",
+    "Prompt工程",
+    "意图识别与槽位抽取",
+    "向量数据库（Milvus）",
+    "混合检索（BM25 + Embedding + Reranker）",
+    "LLM部署与优化",
+    "Docker容器化",
+    "AI智能体开发",
+    "Coze/Dify平台使用"
+  ],
+  "missing_skills": [
+    "多模态大模型应用",
+    "强化学习在AI Agent中的应用",
+    "生产级Kubernetes部署经验",
+    "AIGC生成内容合规性审核"
+  ],
+  "strengths": [
+    "项目成果量化清晰，多个指标提升显著（如响应效率+40%，准确率+15%，用户满意度+30%）",
+    "具备从数据预处理到模型微调再到系统部署的全栈AI应用能力",
+    "熟练掌握前沿AI工程框架（MCP、A2A、RAG、Coze等），工程落地能力强",
+    "有多个真实企业级项目经验，非学术型空谈，具备快速融入团队的潜力",
+    "学习能力强，持续关注AI前沿技术并快速实践"
+  ],
+  "weaknesses": [
+    "尚未毕业（2025年6月毕业），部分企业可能要求入职时间与毕业时间匹配",
+    "缺乏大型分布式系统或高并发生产环境的部署经验",
+    "缺少海外项目或跨文化团队协作经验（虽有海外电商平台项目，但未明确团队协作背景）"
+  ]
+}
+2025-12-08 16:17:25,432 - modules.job_matcher - INFO - AI匹配完成: 总体匹配度=92%, 建议=强烈推荐投递该职位
+2025-12-08 16:17:25,433 - modules.boss_zhipin - INFO - 匹配度达到92.00%，符合自动沟通条件
+2025-12-08 16:17:25,433 - modules.boss_zhipin - INFO - 匹配度为92.00%，尝试点击'立即沟通'按钮...
+2025-12-08 16:17:27,455 - modules.boss_zhipin - INFO - 找到'立即沟通'按钮，使用选择器: div.btn.btn-startchat-wrap a.btn.btn-startchat
+2025-12-08 16:17:28,493 - modules.boss_zhipin - INFO - 成功点击'立即沟通'按钮！匹配度: 92.00%
+2025-12-08 16:17:31,507 - modules.boss_zhipin - INFO - 已成功发起沟通！
+2025-12-08 16:17:31,507 - __main__ - INFO - 已自动发起沟通，当前总计: 2个职位
+2025-12-08 16:17:31,507 - __main__ - INFO - 搜索关键词: Agent
+2025-12-08 16:17:31,507 - modules.boss_zhipin - INFO - 开始搜索职位，关键词: Agent，城市: 北京，页码: 1
+2025-12-08 16:17:37,071 - modules.boss_zhipin - INFO - 模拟用户逐字输入关键词...
+2025-12-08 16:17:37,081 - modules.boss_zhipin - INFO - 使用定位器 //input[@placeholder="搜索职位、公司"] 找到搜索输入框
+2025-12-08 16:17:39,406 - modules.boss_zhipin - INFO - 模拟用户点击搜索按钮...
+2025-12-08 16:17:39,409 - modules.boss_zhipin - INFO - 使用定位器 //a[@ka="job_search_btn_click"] 找到搜索按钮
+2025-12-08 16:17:46,463 - modules.boss_zhipin - INFO - 提取搜索结果...
+2025-12-08 16:17:46,467 - modules.boss_zhipin - INFO - 使用定位器 li.job-card-box 找到 30 个职位卡片
+2025-12-08 16:17:46,493 - modules.boss_zhipin - INFO - 提取职位: Python智能体-agent builder - 润和软件
+2025-12-08 16:17:46,517 - modules.boss_zhipin - INFO - 提取职位: PythonAI开发工程师 - 小联科技
+2025-12-08 16:17:46,541 - modules.boss_zhipin - INFO - 提取职位: AI大模型研发工程师-26届校招 - 金智教育
+2025-12-08 16:17:46,564 - modules.boss_zhipin - INFO - 提取职位: 大模型算法工程师 - 弘正
+2025-12-08 16:17:46,591 - modules.boss_zhipin - INFO - 提取职位: AI解决方案工程师 - 某中型大数据公司
+2025-12-08 16:17:46,616 - modules.boss_zhipin - INFO - 提取职位: 人工智能实习生(Agent/RAG) - 凯易讯
+2025-12-08 16:17:46,639 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师(J10081) - 索辰科技
+2025-12-08 16:17:46,658 - modules.boss_zhipin - INFO - 提取职位: AI研发工程师 - 赛宁网安
+2025-12-08 16:17:46,685 - modules.boss_zhipin - INFO - 提取职位: 高级算法工程师 - 满帮集团
+2025-12-08 16:17:46,708 - modules.boss_zhipin - INFO - 提取职位: 算法工程师AI - 南京动图技术有限公司
+2025-12-08 16:17:46,728 - modules.boss_zhipin - INFO - 提取职位: AI大模型/智能体Agent应用开发工程师 - 立趣
+2025-12-08 16:17:46,750 - modules.boss_zhipin - INFO - 提取职位: AI Agent工程師｜LangChain / LLM整合 - 上海酷熊旅游咨询...
+2025-12-08 16:17:46,773 - modules.boss_zhipin - INFO - 提取职位: AI应用开发工程师 - 宇翔高远
+2025-12-08 16:17:46,797 - modules.boss_zhipin - INFO - 提取职位: AI技术工程师 - 成都睿工智能控制技术
+2025-12-08 16:17:46,821 - modules.boss_zhipin - INFO - 提取职位: 大模型工程师（自研项目） - 南京诚迈智能信息...
+2025-12-08 16:17:46,844 - modules.boss_zhipin - INFO - 提取职位: ai应用开发工程师 - 飞搏智慧
+2025-12-08 16:17:46,864 - modules.boss_zhipin - INFO - 提取职位: LLM Agent算法工程师 - 某大型消费电子公司
+2025-12-08 16:17:46,885 - modules.boss_zhipin - INFO - 提取职位: 大模型（应用/工程/nlp/训练推理/多模态） - 某大型运营商/增值服务公司
+2025-12-08 16:17:46,909 - modules.boss_zhipin - INFO - 提取职位: AI开发工程师（Agents方向） - 云快充
+2025-12-08 16:17:46,927 - modules.boss_zhipin - INFO - 提取职位: ai算法工程师 - 某知名国企（非外包）
+2025-12-08 16:17:46,950 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师 - 玖壹叁陆零医学科技
+2025-12-08 16:17:46,968 - modules.boss_zhipin - INFO - 提取职位: Agent算法工程师（Python/Java/C++/GO） - 湖北电行科技有限公司
+2025-12-08 16:17:46,987 - modules.boss_zhipin - INFO - 提取职位: ai智能体研发 - 元数科技
+2025-12-08 16:17:47,012 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师 - 中车数字
+2025-12-08 16:17:47,030 - modules.boss_zhipin - INFO - 提取职位: AI Agent开发工程师 - 安链科技
+2025-12-08 16:17:47,051 - modules.boss_zhipin - INFO - 提取职位: 软件开发工程师 - 数衍数矩
+2025-12-08 16:17:47,072 - modules.boss_zhipin - INFO - 提取职位: 大模型算法工程师 - 审元科技
+2025-12-08 16:17:47,093 - modules.boss_zhipin - INFO - 提取职位: AI Agent 算法工程师 - 江苏二十六度节能科技
+2025-12-08 16:17:47,115 - modules.boss_zhipin - INFO - 提取职位: 华为秋招—— AI方向（Agent） - 华为技术有限公司
+2025-12-08 16:17:47,134 - modules.boss_zhipin - INFO - 提取职位: IT管培生（AI技术，26届可投）base广州 - 凡岛
+2025-12-08 16:17:47,134 - modules.boss_zhipin - INFO - 搜索完成，找到30个相关职位
+2025-12-08 16:17:47,134 - __main__ - INFO - 关键词"Agent"找到30个职位
+2025-12-08 16:17:47,135 - __main__ - INFO - 开始处理前2个职位
+2025-12-08 16:17:47,135 - __main__ - INFO - 处理第1/2个职位: Python智能体-agent builder
+2025-12-08 16:17:47,135 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/f906f9b69119afb103x-2N21EldY.html
+2025-12-08 16:17:53,213 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-08 16:17:53,223 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-08 16:17:53,223 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-08 16:17:53,232 - modules.boss_zhipin - INFO - 提取到职位标题: Python智能体-agent builder
+2025-12-08 16:17:53,239 - modules.boss_zhipin - INFO - 提取到薪资: 11-22K
+2025-12-08 16:17:53,241 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-08 16:17:53,242 - modules.boss_zhipin - INFO - 成功提取职位详情: Python智能体-agent builder - 
+2025-12-08 16:17:53,242 - modules.boss_zhipin - INFO - 学历和经验要求满足，继续计算详细匹配度
+2025-12-08 16:18:00,733 - httpx - INFO - HTTP Request: POST https://api.tokenpony.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 16:18:00,734 - modules.job_matcher - INFO - AI匹配分析结果: {
+  "match_score": 92,
+  "skill_match": 95,
+  "experience_match": 90,
+  "education_match": 85,
+  "analysis": "该候选人与AI应用开发工程师职位高度匹配。技能方面，他精通Python、大模型应用、SFT/LoRA微调、RAG系统构建、MCP协议、Function Call等核心技能，且在多个项目中成功落地智能体系统（如旅游助手、电商客服），完全契合AI应用开发岗位的技术要求。经验方面，他拥有近2年扎实的AI算法与应用开发经验，涵盖从数据预处理、模型训练、微调到系统部署的全链路能力，尤其在RAG和智能体开发方面有突出成果（如提升命中率38%、降低开发成本70%），远超初级岗位要求。教育背景为计算机科学与技术本科在读（2025年毕业），学历符合要求，且有国家级竞赛奖项和奖学金佐证其能力。不足之处在于：年龄仅22岁，工作经验尚浅，虽项目成果亮眼但多为实习或短期项目，缺乏大型企业级系统独立负责经验；此外，简历中部分时间线存在逻辑矛盾（如2025年7月-11月的实习经历在当前日期2024年尚未来临），需核实真实性。总体而言，其技术深度、项目落地能力和学习热情远超同龄人，是极具潜力的AI应用型人才。",
+  "recommendation": "强烈推荐投递该职位",
+  "matched_skills": [
+    "Python",
+    "大模型应用（LLM）",
+    "SFT与LoRA微调",
+    "RAG系统构建",
+    "MCP协议与Function Call",
+    "Prompt工程",
+    "向量数据库（Milvus）",
+    "智能体开发（Agent）",
+    "模型部署（Docker）",
+    "混合检索（BM25 + Embedding + Reranker）",
+    "NLP与意图识别",
+    "文本分类（Bert/FastText）",
+    "数据预处理与清洗"
+  ],
+  "missing_skills": [
+    "大规模分布式系统架构经验",
+    "生产环境高并发优化经验",
+    "Kubernetes部署经验",
+    "AIGC多模态应用经验",
+    "企业级AI平台（如LangChain Enterprise）深度使用经验"
+  ],
+  "strengths": [
+    "技术栈全面且前沿，覆盖AI应用开发全链路",
+    "项目成果量化清晰，具备显著业务价值（如提升满意度30%、降低开发成本70%）",
+    "熟练使用Coze、Dify等低代码AI平台，具备快速原型能力",
+    "具备从数据到部署的完整闭环经验，工程落地能力强",
+    "学习能力强，持续关注A2A、MCP等前沿协议"
+  ],
+  "weaknesses": [
+    "年龄偏小，工作经验尚不足3年，缺乏大型企业复杂项目主导经验",
+    "简历中存在时间线逻辑错误（如2025年7月-11月的实习经历在当前时间尚未发生）",
+    "未体现团队协作管理或跨部门沟通的深度经验",
+    "缺少云原生部署（如K8s）和生产级监控运维经验"
+  ]
+}
+2025-12-08 16:18:00,734 - modules.job_matcher - INFO - AI匹配完成: 总体匹配度=92%, 建议=强烈推荐投递该职位
+2025-12-08 16:18:00,734 - modules.boss_zhipin - INFO - 匹配度达到92.00%，符合自动沟通条件
+2025-12-08 16:18:00,734 - modules.boss_zhipin - INFO - 匹配度为92.00%，尝试点击'立即沟通'按钮...
+2025-12-08 16:18:02,756 - modules.boss_zhipin - INFO - 找到'立即沟通'按钮，使用选择器: div.btn.btn-startchat-wrap a.btn.btn-startchat
+2025-12-08 16:18:03,810 - modules.boss_zhipin - INFO - 成功点击'立即沟通'按钮！匹配度: 92.00%
+2025-12-08 16:18:06,811 - modules.boss_zhipin - INFO - 已成功发起沟通！
+2025-12-08 16:18:06,811 - __main__ - INFO - 已自动发起沟通，当前总计: 3个职位
+2025-12-08 16:18:08,818 - __main__ - INFO - 处理第2/2个职位: PythonAI开发工程师
+2025-12-08 16:18:08,818 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/a332bb93df3f9f2803190t28EFtY.html
+2025-12-08 16:18:14,843 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-08 16:18:14,853 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-08 16:18:14,854 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-08 16:18:14,859 - modules.boss_zhipin - INFO - 提取到职位标题: PythonAI开发工程师
+2025-12-08 16:18:14,866 - modules.boss_zhipin - INFO - 提取到薪资: 18-24K
+2025-12-08 16:18:14,869 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-08 16:18:14,869 - modules.boss_zhipin - INFO - 成功提取职位详情: PythonAI开发工程师 - 
+2025-12-08 16:18:14,869 - modules.boss_zhipin - INFO - 学历和经验要求满足，继续计算详细匹配度
+2025-12-08 16:18:22,085 - httpx - INFO - HTTP Request: POST https://api.tokenpony.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 16:18:22,086 - modules.job_matcher - INFO - AI匹配分析结果: {
+  "match_score": 92,
+  "skill_match": 95,
+  "experience_match": 90,
+  "education_match": 85,
+  "analysis": "该候选人与AI应用开发工程师职位高度匹配。技能方面，他精通Python、大模型应用、SFT/LoRA微调、RAG系统构建、MCP协议、Function Call等核心技能，且在多个项目中成功落地智能体系统（如旅游助手、电商客服），完全契合AI应用开发岗位对工程化落地能力的要求。经验方面，他拥有近2年一线AI算法与应用开发经验，涵盖从数据预处理、模型微调到系统部署全流程，尤其在RAG和智能体开发方面有突出成果（如提升命中率38%、降低开发成本70%），远超初级候选人水平。教育背景为计算机科学与技术本科在读（2025年毕业），学历符合要求，且有国家级竞赛奖项和奖学金佐证其学习能力。唯一不足是年龄仅22岁，项目经验虽扎实但尚属早期职业阶段，缺乏大型企业级系统架构或团队管理经验，但此点对AI应用开发岗非核心要求。整体来看，其技术深度、项目成果和工程能力远超岗位基本要求。",
+  "recommendation": "强烈推荐投递",
+  "matched_skills": [
+    "Python",
+    "大模型应用（LLM）",
+    "SFT与LoRA微调",
+    "RAG系统构建",
+    "MCP协议",
+    "Function Call",
+    "Prompt工程",
+    "意图识别与槽位抽取",
+    "向量数据库（Milvus）",
+    "混合检索（BM25 + Embedding + Reranker）",
+    "Docker部署",
+    "AI智能体开发",
+    "Coze/Dify平台使用",
+    "文本分类（BERT/FastText）",
+    "模型压缩与蒸馏"
+  ],
+  "missing_skills": [
+    "多模态大模型应用",
+    "AIGC生成内容审核体系",
+    "Kubernetes集群部署",
+    "大规模分布式推理优化",
+    "商业产品全生命周期管理经验"
+  ],
+  "strengths": [
+    "在多个真实业务场景中独立完成从0到1的AI应用系统搭建，工程落地能力强",
+    "掌握前沿AI工程化技术栈（MCP、RAG、智能体链路），技术前瞻性突出",
+    "项目成果量化清晰，具备显著业务价值（如提升满意度30%、降低开发成本70%）",
+    "具备扎实的数据预处理、模型优化与评估能力，全栈开发意识强",
+    "学习能力强，持续关注AI领域新技术并快速实践"
+  ],
+  "weaknesses": [
+    "年龄较小，职业经验尚浅，缺乏复杂系统架构设计或跨团队协作经验",
+    "未体现云平台（如AWS/Azure）或CI/CD流水线使用经验",
+    "缺少高并发、低延迟生产环境调优的明确案例"
+  ]
+}
+2025-12-08 16:18:22,087 - modules.job_matcher - INFO - AI匹配完成: 总体匹配度=92%, 建议=强烈推荐投递
+2025-12-08 16:18:22,087 - modules.boss_zhipin - INFO - 匹配度达到92.00%，符合自动沟通条件
+2025-12-08 16:18:22,087 - modules.boss_zhipin - INFO - 匹配度为92.00%，尝试点击'立即沟通'按钮...
+2025-12-08 16:18:24,103 - modules.boss_zhipin - INFO - 找到'立即沟通'按钮，使用选择器: div.btn.btn-startchat-wrap a.btn.btn-startchat
+2025-12-08 16:18:25,147 - modules.boss_zhipin - INFO - 成功点击'立即沟通'按钮！匹配度: 92.00%
+2025-12-08 16:18:28,148 - modules.boss_zhipin - INFO - 已成功发起沟通！
+2025-12-08 16:18:28,148 - __main__ - INFO - 已自动发起沟通，当前总计: 4个职位
+2025-12-08 16:18:28,148 - __main__ - INFO - 搜索关键词: AI工程师
+2025-12-08 16:18:28,149 - modules.boss_zhipin - INFO - 开始搜索职位，关键词: AI工程师，城市: 北京，页码: 1
+2025-12-08 16:18:33,709 - modules.boss_zhipin - INFO - 模拟用户逐字输入关键词...
+2025-12-08 16:18:33,719 - modules.boss_zhipin - INFO - 使用定位器 //input[@placeholder="搜索职位、公司"] 找到搜索输入框
+2025-12-08 16:18:36,046 - modules.boss_zhipin - INFO - 模拟用户点击搜索按钮...
+2025-12-08 16:18:36,049 - modules.boss_zhipin - INFO - 使用定位器 //a[@ka="job_search_btn_click"] 找到搜索按钮
+2025-12-08 16:18:43,105 - modules.boss_zhipin - INFO - 提取搜索结果...
+2025-12-08 16:18:43,109 - modules.boss_zhipin - INFO - 使用定位器 li.job-card-box 找到 30 个职位卡片
+2025-12-08 16:18:43,134 - modules.boss_zhipin - INFO - 提取职位: AI工程师 - 花笙书城
+2025-12-08 16:18:43,155 - modules.boss_zhipin - INFO - 提取职位: AI大模型应用开发工程师 - 河南瑞临万道科技
+2025-12-08 16:18:43,177 - modules.boss_zhipin - INFO - 提取职位: AI工程师（国企） - 南京某大型通信/网络设备公司
+2025-12-08 16:18:43,198 - modules.boss_zhipin - INFO - 提取职位: AI 开发工程师 - 芯伴科技
+2025-12-08 16:18:43,220 - modules.boss_zhipin - INFO - 提取职位: AI算法工程师(接受无经验+转行+部门直招) - 华为
+2025-12-08 16:18:43,242 - modules.boss_zhipin - INFO - 提取职位: AI算法工程师 - 江苏艾思飞
+2025-12-08 16:18:43,262 - modules.boss_zhipin - INFO - 提取职位: AI 研发工程师 - 锐驰鼎欣
+2025-12-08 16:18:43,281 - modules.boss_zhipin - INFO - 提取职位: 算法工程师AI - 南京动图技术有限公司
+2025-12-08 16:18:43,302 - modules.boss_zhipin - INFO - 提取职位: AI算法工程师 - 合肥弈航驰科技
+2025-12-08 16:18:43,324 - modules.boss_zhipin - INFO - 提取职位: AI工程师 公路物流保险智能匹配与比价方向 - 苏甲物流
+2025-12-08 16:18:43,342 - modules.boss_zhipin - INFO - 提取职位: AI解决方案工程师 - 某中型大数据公司
+2025-12-08 16:18:43,364 - modules.boss_zhipin - INFO - 提取职位: AI研发工程师 - 赛宁网安
+2025-12-08 16:18:43,388 - modules.boss_zhipin - INFO - 提取职位: AI技术工程师 - 成都睿工智能控制技术
+2025-12-08 16:18:43,407 - modules.boss_zhipin - INFO - 提取职位: AI 工程师-软件类 - 上海华为技术有限公司
+2025-12-08 16:18:43,425 - modules.boss_zhipin - INFO - 提取职位: AI工程师（大模型方向） - 鼎捷数智
+2025-12-08 16:18:43,444 - modules.boss_zhipin - INFO - 提取职位: ai工程师 - 南京步瑞吉网络科技
+2025-12-08 16:18:43,464 - modules.boss_zhipin - INFO - 提取职位: AI工程师（26届可投，base广州） - 凡岛
+2025-12-08 16:18:43,483 - modules.boss_zhipin - INFO - 提取职位: AI工程师（无考核、无责底薪8K） - 朗歆信息科技
+2025-12-08 16:18:43,504 - modules.boss_zhipin - INFO - 提取职位: AI数字化运营工程师 - 清研讯科TSINGOAL
+2025-12-08 16:18:43,523 - modules.boss_zhipin - INFO - 提取职位: AI开发工程师（Agents方向） - 云快充
+2025-12-08 16:18:43,545 - modules.boss_zhipin - INFO - 提取职位: AI应用开发工程师 - 宇翔高远
+2025-12-08 16:18:43,565 - modules.boss_zhipin - INFO - 提取职位: ai算法工程师（FAE) - 华为
+2025-12-08 16:18:43,583 - modules.boss_zhipin - INFO - 提取职位: AI 算法工程师 - 某大型通信/网络设备上市公司
+2025-12-08 16:18:43,601 - modules.boss_zhipin - INFO - 提取职位: AI智能体开发工程师 - 商络电子
+2025-12-08 16:18:43,621 - modules.boss_zhipin - INFO - 提取职位: 资深AI技术支持工程师 - 某大型电力公司
+2025-12-08 16:18:43,645 - modules.boss_zhipin - INFO - 提取职位: AI模型工程师 - 软通动力
+2025-12-08 16:18:43,664 - modules.boss_zhipin - INFO - 提取职位: AI工程师（校招） - 华为
+2025-12-08 16:18:43,691 - modules.boss_zhipin - INFO - 提取职位: ai应用开发工程师 - 飞搏智慧
+2025-12-08 16:18:43,713 - modules.boss_zhipin - INFO - 提取职位: AI 大模型应用研发工程师 - 无际
+2025-12-08 16:18:43,732 - modules.boss_zhipin - INFO - 提取职位: 人工智能研发工程师 - 江苏柱华信息科技...
+2025-12-08 16:18:43,732 - modules.boss_zhipin - INFO - 搜索完成，找到30个相关职位
+2025-12-08 16:18:43,732 - __main__ - INFO - 关键词"AI工程师"找到30个职位
+2025-12-08 16:18:43,733 - __main__ - INFO - 开始处理前2个职位
+2025-12-08 16:18:43,733 - __main__ - INFO - 处理第1/2个职位: AI工程师
+2025-12-08 16:18:43,733 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/7d5dc467537ff3f8031z3tu4EFtY.html
+2025-12-08 16:18:49,798 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-08 16:18:49,807 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-08 16:18:49,809 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-08 16:18:49,818 - modules.boss_zhipin - INFO - 提取到职位标题: AI工程师
+2025-12-08 16:18:49,828 - modules.boss_zhipin - INFO - 提取到薪资: 20-40K
+2025-12-08 16:18:49,829 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-08 16:18:49,830 - modules.boss_zhipin - INFO - 成功提取职位详情: AI工程师 - 
+2025-12-08 16:18:49,830 - modules.boss_zhipin - INFO - 学历和经验要求满足，继续计算详细匹配度
+2025-12-08 16:18:56,053 - httpx - INFO - HTTP Request: POST https://api.tokenpony.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 16:18:56,055 - modules.job_matcher - INFO - AI匹配分析结果: {
+  "match_score": 92,
+  "skill_match": 95,
+  "experience_match": 90,
+  "education_match": 85,
+  "analysis": "该候选人与AI应用开发工程师职位高度匹配。技能方面，他精通Python、大模型应用、SFT/LoRA微调、RAG系统构建、MCP协议、Function Call等核心技能，且在多个项目中独立完成从数据预处理、模型微调到系统部署的全流程，完全契合AI应用开发岗位的技术要求。经验方面，他拥有在宝思利和正计通的AI算法实战经验，主导了电商RAG智能客服、智能旅游助手等复杂AI Agent系统开发，项目成果量化清晰（如准确率提升、成本降低70%），体现出优秀的工程落地能力。教育背景为计算机科学与技术本科在读（2025年毕业），年龄22岁，虽为应届生，但项目经验远超普通毕业生，且有国家级竞赛奖项佐证技术实力。唯一轻微不足是尚未有大规模生产环境部署经验（如K8s、CI/CD流水线），且简历中部分时间线存在逻辑矛盾（如2025年7月-11月的实习经历在当前日期2024年尚未来临），需在面试中澄清。整体来看，其技术深度、项目完整性和成果表现力远超岗位基本要求。",
+  "recommendation": "强烈推荐投递",
+  "matched_skills": [
+    "Python",
+    "大模型应用",
+    "SFT微调",
+    "LoRA微调",
+    "RAG系统构建",
+    "MCP协议",
+    "Function Call",
+    "Prompt工程",
+    "意图识别与槽位抽取",
+    "向量数据库（Milvus）",
+    "混合检索（BM25 + Embedding + Reranker）",
+    "LLM生成优化",
+    "Docker部署",
+    "AI Agent开发",
+    "数据预处理与清洗",
+    "模型压缩与蒸馏"
+  ],
+  "missing_skills": [
+    "Kubernetes集群部署",
+    "CI/CD流水线搭建",
+    "多模态大模型应用",
+    "AIGC内容生成（如图像/视频）",
+    "生产级监控与日志系统（如Prometheus/Grafana）"
+  ],
+  "strengths": [
+    "项目经验丰富，多个高价值AI Agent系统从0到1落地",
+    "技术栈全面，覆盖大模型微调、检索增强、智能体编排等前沿领域",
+    "成果量化清晰，具备显著业务价值（如提升准确率、降低成本）",
+    "工程能力强，能独立完成数据、模型、系统、部署全流程",
+    "学习能力强，持续关注AI前沿技术（如A2A、MCP协议）"
+  ],
+  "weaknesses": [
+    "尚未有大规模生产环境运维经验",
+    "简历中部分时间线存在未来日期（如2025.07-2025.11），需澄清真实性",
+    "学历为本科在读，无硕士或更高学位，但项目经验已弥补此短板",
+    "缺乏团队管理或跨部门协作的明确描述"
+  ]
+}
+2025-12-08 16:18:56,055 - modules.job_matcher - INFO - AI匹配完成: 总体匹配度=92%, 建议=强烈推荐投递
+2025-12-08 16:18:56,055 - modules.boss_zhipin - INFO - 匹配度达到92.00%，符合自动沟通条件
+2025-12-08 16:18:56,055 - modules.boss_zhipin - INFO - 匹配度为92.00%，尝试点击'立即沟通'按钮...
+2025-12-08 16:18:58,077 - modules.boss_zhipin - INFO - 找到'立即沟通'按钮，使用选择器: div.btn.btn-startchat-wrap a.btn.btn-startchat
+2025-12-08 16:18:59,129 - modules.boss_zhipin - INFO - 成功点击'立即沟通'按钮！匹配度: 92.00%
+2025-12-08 16:19:02,145 - modules.boss_zhipin - INFO - 已成功发起沟通！
+2025-12-08 16:19:02,145 - __main__ - INFO - 已自动发起沟通，当前总计: 5个职位
+2025-12-08 16:19:04,154 - __main__ - INFO - 处理第2/2个职位: AI大模型应用开发工程师
+2025-12-08 16:19:04,155 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/2010f423f35b16b903J829u_FVpU.html
+2025-12-08 16:19:10,244 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-08 16:19:10,254 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-08 16:19:10,254 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-08 16:19:10,261 - modules.boss_zhipin - INFO - 提取到职位标题: AI大模型应用开发工程师
+2025-12-08 16:19:10,269 - modules.boss_zhipin - INFO - 提取到薪资: 15-20K
+2025-12-08 16:19:10,272 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-08 16:19:10,272 - modules.boss_zhipin - INFO - 成功提取职位详情: AI大模型应用开发工程师 - 
+2025-12-08 16:19:10,272 - modules.boss_zhipin - INFO - 学历和经验要求满足，继续计算详细匹配度
+2025-12-08 16:19:17,246 - httpx - INFO - HTTP Request: POST https://api.tokenpony.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-12-08 16:19:17,246 - modules.job_matcher - INFO - AI匹配分析结果: {
+  "match_score": 92,
+  "skill_match": 95,
+  "experience_match": 90,
+  "education_match": 85,
+  "analysis": "该候选人与AI应用开发工程师职位高度匹配。技能方面，他精通Python、大模型应用、SFT/LoRA微调、RAG、MCP协议、Function Call等核心AI工程能力，且在Coze、Dify等AI开发平台有实战经验，完全覆盖职位所需技术栈。经验方面，他主导了多个AI应用项目，包括智能旅游助手（多意图路由+MCP+LLM生成）、电商RAG客服系统（向量数据库构建+混合检索+模型微调）、智能文本分类系统等，项目深度和落地成果显著，尤其在提升响应效率、降低开发成本、提高用户满意度方面有量化业绩，与AI应用开发岗位高度契合。教育背景为计算机科学与技术本科在读（2025年毕业），年龄22岁，虽为应届生，但项目经验远超普通毕业生，且有国家级竞赛奖项，学术基础扎实。不足之处在于：1）目前仍为在校生，正式全职工作经验不足1年，可能在企业级系统架构或团队协作流程上略有欠缺；2）未提及工程部署（如K8s、CI/CD）或生产环境监控经验，但其Docker部署经验可部分弥补；3）未展示多模态或AIGC生成内容（如图像、语音）相关经验，但职位未明确要求。总体而言，其技术能力、项目成果和学习能力远超岗位基本要求，属于潜力型人才。",
+  "recommendation": "强烈推荐投递该职位",
+  "matched_skills": [
+    "Python",
+    "大模型应用（LLM）",
+    "SFT/LoRA微调",
+    "RAG系统构建",
+    "MCP协议",
+    "Function Call",
+    "Prompt工程",
+    "Coze/Dify平台",
+    "向量数据库（Milvus）",
+    "混合检索（BM25 + Embedding + Reranker）",
+    "模型部署（Docker）",
+    "意图识别与槽位抽取",
+    "SQL自动生成",
+    "模型评估（RAGAS、人工评估）"
+  ],
+  "missing_skills": [
+    "Kubernetes/Docker编排",
+    "CI/CD流水线",
+    "生产环境监控与日志系统",
+    "多模态AI（图像/语音）",
+    "大规模分布式训练"
+  ],
+  "strengths": [
+    "项目经验丰富，多个AI应用系统从0到1落地并有量化业绩",
+    "技术栈前沿且全面，覆盖大模型应用全链路",
+    "具备工程思维，能将算法能力转化为可落地的产品功能",
+    "学习能力强，快速掌握Coze、Dify等新平台",
+    "注重结果导向，擅长通过数据验证效果"
+  ],
+  "weaknesses": [
+    "尚为本科在读，正式全职工作经验较短（约1年）",
+    "缺乏大型分布式系统或云原生部署经验",
+    "未展示跨团队协作或项目管理经验"
+  ]
+}
+2025-12-08 16:19:17,246 - modules.job_matcher - INFO - AI匹配完成: 总体匹配度=92%, 建议=强烈推荐投递该职位
+2025-12-08 16:19:17,248 - modules.boss_zhipin - INFO - 匹配度达到92.00%，符合自动沟通条件
+2025-12-08 16:19:17,248 - modules.boss_zhipin - INFO - 匹配度为92.00%，尝试点击'立即沟通'按钮...
+2025-12-08 16:19:19,260 - modules.boss_zhipin - INFO - 找到'立即沟通'按钮，使用选择器: div.btn.btn-startchat-wrap a.btn.btn-startchat
+2025-12-08 16:19:20,316 - modules.boss_zhipin - INFO - 成功点击'立即沟通'按钮！匹配度: 92.00%
+2025-12-08 16:19:23,319 - modules.boss_zhipin - INFO - 已成功发起沟通！
+2025-12-08 16:19:23,319 - __main__ - INFO - 已自动发起沟通，当前总计: 6个职位
+2025-12-08 16:19:23,319 - __main__ - INFO - 步骤6: 保存结果
+2025-12-08 16:19:23,321 - modules.boss_zhipin - INFO - 成功保存6个职位详情到: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jobs\boss_zhipin_jobs_with_match.json
+2025-12-08 16:19:23,321 - __main__ - INFO - 成功保存6个职位详情到: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jobs\boss_zhipin_jobs_with_match.json
+2025-12-08 16:19:23,321 - __main__ - INFO - === 执行结果统计 ===
+2025-12-08 16:19:23,323 - __main__ - INFO - 处理职位总数: 6
+2025-12-08 16:19:23,323 - __main__ - INFO - 自动发起沟通: 6
+2025-12-08 16:19:23,323 - __main__ - INFO - 高匹配度职位(>=80%): 6
+2025-12-08 16:19:23,323 - __main__ - INFO - 中等匹配度职位(60-80%): 0
+2025-12-08 16:19:23,323 - __main__ - INFO - 低匹配度职位(<60%): 0
+2025-12-08 16:19:23,323 - __main__ - INFO - 所有流程执行完成！
+2025-12-08 16:19:23,324 - __main__ - INFO - 浏览器保持打开状态，请手动关闭
+2025-12-08 16:19:23,324 - __main__ - INFO - 程序已完成所有操作，按回车键退出...
