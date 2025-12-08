@@ -1,0 +1,71 @@
+Metadata-Version: 2.4
+Name: auto-boss-qichacha
+Version: 0.1.0
+Summary: Auto Boss Zhipin job search based on resume analysis
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: openai>=1.0.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: playwright>=1.30.0
+Requires-Dist: PyPDF2>=3.0.0
+Requires-Dist: beautifulsoup4>=4.12.0
+Dynamic: license-file
+
+# auto_boss_qichacha
+自动根据简历匹配职位，最后通过企查查计算分数，合适再进行投递
+
+## 文件结构规划
+
+```
+auto_boss_qichacha/
+├── config/              # 配置管理模块
+│   ├── __init__.py
+│   └── settings.py      # 系统配置（API密钥、模型参数等）
+├── data/                # 数据存储目录
+│   ├── __init__.py
+│   ├── resumes/         # 简历文件存放
+│   └── results/         # 筛选结果存放
+├── modules/             # 核心功能模块
+│   ├── __init__.py
+│   ├── boss_scraper.py  # Boss直聘岗位数据获取
+│   ├── resume_parser.py # 简历信息解析与提取
+│   ├── matcher.py       # 简历与岗位匹配算法
+│   └── filter.py        # 匹配结果筛选逻辑
+├── utils/               # 工具函数
+│   ├── __init__.py
+│   ├── logger.py        # 日志记录
+│   └── helpers.py       # 通用辅助函数
+├── main.py              # 主程序入口
+├── pyproject.toml       # 项目配置
+├── .env                 # 环境变量
+└── README.md            # 项目说明
+```
+
+## 各模块功能说明
+
+### config/
+- `settings.py`: 管理系统配置，包括API密钥、模型参数、筛选条件阈值等
+
+### data/
+- `resumes/`: 存放用户简历文件（支持PDF、DOCX等格式）
+- `results/`: 存放筛选结果，支持JSON、CSV等格式输出
+
+### modules/
+- `boss_scraper.py`: Boss直聘网站数据获取，包括登录、搜索岗位、提取岗位信息
+- `resume_parser.py`: 解析简历文件，提取关键信息（技能、经验、学历、期望薪资等）
+- `matcher.py`: 使用大模型计算简历与岗位的匹配度
+- `filter.py`: 根据匹配度阈值和用户自定义条件筛选岗位
+
+### utils/
+- `logger.py`: 日志记录功能
+- `helpers.py`: 通用辅助函数
+
+## 工作流程
+
+1. 加载配置信息
+2. 解析用户简历
+3. 获取Boss直聘岗位数据
+4. 计算简历与岗位匹配度
+5. 根据条件筛选岗位
+6. 输出结果给用户

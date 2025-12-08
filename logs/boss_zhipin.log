@@ -1,0 +1,807 @@
+2025-12-07 16:35:53,360 - __main__ - INFO - 正在打开Boss直聘登录页面，请手动完成登录...
+2025-12-07 16:35:54,124 - __main__ - INFO - Playwright浏览器初始化成功
+2025-12-07 16:35:55,647 - __main__ - INFO - 打开Boss直聘登录页面成功
+2025-12-07 16:35:58,654 - __main__ - INFO - 请在浏览器中手动完成登录操作（扫码或输入账号密码）
+2025-12-07 16:35:58,654 - __main__ - INFO - 登录完成后，请按回车键继续...
+2025-12-07 16:42:03,283 - __main__ - INFO - 开始执行Boss直聘职位搜索流程
+2025-12-07 16:42:03,283 - __main__ - INFO - 步骤1: 登录Boss直聘
+2025-12-07 16:42:04,129 - modules.boss_zhipin - INFO - Playwright浏览器初始化成功
+2025-12-07 16:42:04,131 - modules.boss_zhipin - INFO - 登录信息（Cookie）加载成功
+2025-12-07 16:42:04,131 - modules.boss_zhipin - INFO - 检测到保存的登录Cookie，尝试恢复登录状态
+2025-12-07 16:42:06,545 - modules.boss_zhipin - INFO - 打开Boss直聘首页成功
+2025-12-07 16:42:06,549 - modules.boss_zhipin - INFO - 已添加保存的Cookie
+2025-12-07 16:42:12,824 - modules.boss_zhipin - INFO - 登录成功（使用保存的Cookie）
+2025-12-07 16:42:12,824 - __main__ - INFO - 步骤4: 搜索职位并保存详情
+2025-12-07 16:42:12,824 - __main__ - INFO - 搜索关键词: RAG
+2025-12-07 16:42:12,824 - modules.boss_zhipin - INFO - 开始搜索职位，关键词: RAG，城市: 北京，页码: 1
+2025-12-07 16:42:18,257 - modules.boss_zhipin - INFO - 模拟用户逐字输入关键词...
+2025-12-07 16:42:18,272 - modules.boss_zhipin - INFO - 使用定位器 //input[@placeholder="搜索职位、公司"] 找到搜索输入框
+2025-12-07 16:42:20,265 - modules.boss_zhipin - INFO - 模拟用户点击搜索按钮...
+2025-12-07 16:42:20,268 - modules.boss_zhipin - INFO - 使用定位器 //a[@ka="job_search_btn_click"] 找到搜索按钮
+2025-12-07 16:42:27,325 - modules.boss_zhipin - INFO - 提取搜索结果...
+2025-12-07 16:42:27,331 - modules.boss_zhipin - INFO - 使用定位器 li.job-card-box 找到 30 个职位卡片
+2025-12-07 16:42:27,362 - modules.boss_zhipin - INFO - 提取职位: AI人工智能开发工程师 - FOSHO自在必得科技
+2025-12-07 16:42:27,388 - modules.boss_zhipin - INFO - 提取职位: 高级ai算法工程师 - 潮隐人工智能
+2025-12-07 16:42:27,413 - modules.boss_zhipin - INFO - 提取职位: 大模型算法工程师-RAG/智能体方向 - 北京某中型人工智能公司
+2025-12-07 16:42:27,439 - modules.boss_zhipin - INFO - 提取职位: 大模型开发实习生（Agent/RAG/Fine-tune） - 千芯科技
+2025-12-07 16:42:27,462 - modules.boss_zhipin - INFO - 提取职位: AI应用工程师 - 和生创新技术
+2025-12-07 16:42:27,485 - modules.boss_zhipin - INFO - 提取职位: AI 应用开发工程师 - 某大型计算机硬件上市公司
+2025-12-07 16:42:27,509 - modules.boss_zhipin - INFO - 提取职位: 算法工程师（RAG与智能体方向） - 共济科技
+2025-12-07 16:42:27,530 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师 - 华翌科技
+2025-12-07 16:42:27,557 - modules.boss_zhipin - INFO - 提取职位: AI应用开发工程师（机器人 & Agent方向） - 聆海
+2025-12-07 16:42:27,581 - modules.boss_zhipin - INFO - 提取职位: 算法工程师（RAG，六险一金，双休） - 智现未来
+2025-12-07 16:42:27,606 - modules.boss_zhipin - INFO - 提取职位: AI 工程师（Prompt / LLM） - 金海盛潮
+2025-12-07 16:42:27,627 - modules.boss_zhipin - INFO - 提取职位: ai高级算法工程师 - 泽荙科技
+2025-12-07 16:42:27,650 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师 - 大象安泰
+2025-12-07 16:42:27,674 - modules.boss_zhipin - INFO - 提取职位: AI Agent 应用开发工程师 - 自下而上
+2025-12-07 16:42:27,696 - modules.boss_zhipin - INFO - 提取职位: AI应用开发工程师 - 深信服科技
+2025-12-07 16:42:27,717 - modules.boss_zhipin - INFO - 提取职位: 高级ai工程师 - 猫魔力
+2025-12-07 16:42:27,740 - modules.boss_zhipin - INFO - 提取职位: AI agent 智能体大模型应用开发工程师 - 某中型计算机软件公司
+2025-12-07 16:42:27,762 - modules.boss_zhipin - INFO - 提取职位: 智能体AI工程师 - 某大型智能硬件公司
+2025-12-07 16:42:27,784 - modules.boss_zhipin - INFO - 提取职位: 大模型算法实习生（客服方向） - 货拉拉科技
+2025-12-07 16:42:27,806 - modules.boss_zhipin - INFO - 提取职位: 自然语言处理工程师（LLM/RAG/AI Agent） - 深圳影智创思科技
+2025-12-07 16:42:27,826 - modules.boss_zhipin - INFO - 提取职位: 算法工程师 - 跃瓦创新
+2025-12-07 16:42:27,851 - modules.boss_zhipin - INFO - 提取职位: 算法实习生（模型后训练 & 数据合成方向） - 深圳可触未来创新科技
+2025-12-07 16:42:27,873 - modules.boss_zhipin - INFO - 提取职位: 106-RAG算法优化工程师 - 深圳某大型互联网基金管理上市公司
+2025-12-07 16:42:27,895 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师RAG/Agent+LangChain - 北京金道天成信息
+2025-12-07 16:42:27,915 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师 - 微创软件
+2025-12-07 16:42:27,936 - modules.boss_zhipin - INFO - 提取职位: AI应用软件工程师 - 摩罗志远
+2025-12-07 16:42:27,960 - modules.boss_zhipin - INFO - 提取职位: RAG算法负责人 - 某大型互联网公司
+2025-12-07 16:42:27,981 - modules.boss_zhipin - INFO - 提取职位: Agent 算法工程师（实习） - 深度赋智
+2025-12-07 16:42:28,004 - modules.boss_zhipin - INFO - 提取职位: 高级AI应用开发工程师 - 灵犀汇联
+2025-12-07 16:42:28,027 - modules.boss_zhipin - INFO - 提取职位: RAG应用&搜索大模型增强开发工程师 - 华为技术有限公司
+2025-12-07 16:42:28,028 - modules.boss_zhipin - INFO - 搜索完成，找到30个相关职位
+2025-12-07 16:42:28,028 - __main__ - INFO - 开始获取前20个职位的详情
+2025-12-07 16:42:28,028 - __main__ - INFO - 获取第1/20个职位详情: AI人工智能开发工程师
+2025-12-07 16:42:28,028 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/c0c867788d8837a01Hd93N60FlZQ.html
+2025-12-07 16:42:33,293 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:42:33,316 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("工作职责：1. 负责公司AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("在中国品牌出海和全球化的征程中，FOSHO")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("工作职责：1. 负责公司AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("在中国品牌出海和全球化的征程中，FOSHO")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:42:33,330 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:42:35,343 - __main__ - INFO - 获取第2/20个职位详情: 高级ai算法工程师
+2025-12-07 16:42:35,343 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/09f7d52f48cd9a5003xy2N60GFBY.html
+2025-12-07 16:42:40,575 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:42:40,588 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:42:40,588 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:42:40,594 - modules.boss_zhipin - INFO - 提取到职位标题: 高级ai算法工程师
+2025-12-07 16:42:40,601 - modules.boss_zhipin - INFO - 提取到薪资: 20-40K·13薪
+2025-12-07 16:42:40,603 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:42:40,604 - modules.boss_zhipin - INFO - 成功提取职位详情: 高级ai算法工程师 - 
+2025-12-07 16:42:42,610 - __main__ - INFO - 获取第3/20个职位详情: 大模型算法工程师-RAG/智能体方向
+2025-12-07 16:42:42,610 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/06486c650e2085d2031729q5EFZY.html
+2025-12-07 16:42:47,854 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:42:47,866 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:42:47,866 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:42:47,872 - modules.boss_zhipin - INFO - 提取到职位标题: 大模型算法工程师-RAG/智能体方向
+2025-12-07 16:42:47,878 - modules.boss_zhipin - INFO - 提取到薪资: 40-70K·15薪
+2025-12-07 16:42:47,880 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:42:47,881 - modules.boss_zhipin - INFO - 成功提取职位详情: 大模型算法工程师-RAG/智能体方向 - 
+2025-12-07 16:42:49,888 - __main__ - INFO - 获取第4/20个职位详情: 大模型开发实习生（Agent/RAG/Fine-tune）
+2025-12-07 16:42:49,888 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/be6607789f5bea471Hxy2dy4E1dW.html
+2025-12-07 16:42:55,118 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:42:55,139 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("工作内容：1.在专家指导下协助研究大模型应用/部署技术。2")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("中关村云计算产业联盟、智能计算产业技术创新联合体、5G")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("工作内容：1.在专家指导下协助研究大模型应用/部署技术。2")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("中关村云计算产业联盟、智能计算产业技术创新联合体、5G")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:42:55,155 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:42:57,164 - __main__ - INFO - 获取第5/20个职位详情: AI应用工程师
+2025-12-07 16:42:57,164 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/fdd33978c666175e03Jy29y-ElRZ.html
+2025-12-07 16:43:02,402 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:02,423 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("职位名称： AI应用工程师职位描述：1. 负责AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("和生创新成立于2020年9")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("职位名称： AI应用工程师职位描述：1. 负责AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("和生创新成立于2020年9")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:43:02,437 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:43:04,449 - __main__ - INFO - 获取第6/20个职位详情: AI 应用开发工程师
+2025-12-07 16:43:04,449 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/cec063a78ad0252d031429S1GVRQ.html
+2025-12-07 16:43:09,693 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:09,707 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:43:09,707 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:43:09,712 - modules.boss_zhipin - INFO - 提取到职位标题: AI 应用开发工程师
+2025-12-07 16:43:09,720 - modules.boss_zhipin - INFO - 提取到薪资: 20-21K
+2025-12-07 16:43:09,722 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:43:09,723 - modules.boss_zhipin - INFO - 成功提取职位详情: AI 应用开发工程师 - 
+2025-12-07 16:43:11,724 - __main__ - INFO - 获取第7/20个职位详情: 算法工程师（RAG与智能体方向）
+2025-12-07 16:43:11,724 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/6c544bb1f51e52bd03x43dW5EFBQ.html
+2025-12-07 16:43:16,972 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:16,994 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责 1. RAG系统设计与核心优化 a")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("30年来，我们专注一件事：让数据中心更简单共济600")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责 1. RAG系统设计与核心优化 a")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("30年来，我们专注一件事：让数据中心更简单共济600")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:43:17,008 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:43:19,022 - __main__ - INFO - 获取第8/20个职位详情: 大模型应用开发工程师
+2025-12-07 16:43:19,022 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/71c2d46f1b5a5cfd03d539-1EVRX.html
+2025-12-07 16:43:24,256 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:24,277 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("【岗位职责】1、参与公司自研AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("华翌科技（HWELLYI")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("【岗位职责】1、参与公司自研AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("华翌科技（HWELLYI")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:43:24,294 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:43:26,303 - __main__ - INFO - 获取第9/20个职位详情: AI应用开发工程师（机器人 & Agent方向）
+2025-12-07 16:43:26,303 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/d3adf9ce3a07f42e031939q1FVRS.html
+2025-12-07 16:43:31,541 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:31,562 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责：1. 负责机器人AI")
+    2) <div class="job-sec-text fold-text">深圳市聆海智能有限公司，创始团队来自腾讯，政府投资，粤港澳大湾区重点培育人工智能企业。聆海智能基于…</div> aka get_by_text("深圳市聆海智能有限公司，创始团队来自腾讯，政府投资，粤港澳大湾区重点培育人工智能企业。聆海智能基于大语言模型、虚拟数字人、智能硬件等技术，打造了行业领先的AI")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责：1. 负责机器人AI")
+    2) <div class="job-sec-text fold-text">深圳市聆海智能有限公司，创始团队来自腾讯，政府投资，粤港澳大湾区重点培育人工智能企业。聆海智能基于…</div> aka get_by_text("深圳市聆海智能有限公司，创始团队来自腾讯，政府投资，粤港澳大湾区重点培育人工智能企业。聆海智能基于大语言模型、虚拟数字人、智能硬件等技术，打造了行业领先的AI")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:43:31,583 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:43:33,588 - __main__ - INFO - 获取第10/20个职位详情: 算法工程师（RAG，六险一金，双休）
+2025-12-07 16:43:33,588 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/fa2e4dbdced81e1503162t20FVtR.html
+2025-12-07 16:43:38,833 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:38,852 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位要求【岗位需要国内客户地出差，出差期间有差补150")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("深圳智现未来工业软件有限公司，前身为韩国BISTel")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位要求【岗位需要国内客户地出差，出差期间有差补150")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("深圳智现未来工业软件有限公司，前身为韩国BISTel")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:43:38,868 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:43:40,882 - __main__ - INFO - 获取第11/20个职位详情: AI 工程师（Prompt / LLM）
+2025-12-07 16:43:40,882 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/765f9ace44b4d610031929u0FVNT.html
+2025-12-07 16:43:46,097 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:46,114 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:43:46,114 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:43:46,119 - modules.boss_zhipin - INFO - 提取到职位标题: AI 工程师（Prompt / LLM）
+2025-12-07 16:43:46,125 - modules.boss_zhipin - INFO - 提取到薪资: 20-35K
+2025-12-07 16:43:46,127 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:43:46,127 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:43:46,127 - modules.boss_zhipin - INFO - 成功提取职位详情: AI 工程师（Prompt / LLM） - 
+2025-12-07 16:43:48,129 - __main__ - INFO - 获取第12/20个职位详情: ai高级算法工程师
+2025-12-07 16:43:48,129 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/3913f9e0e88fc61603x_39i_FVNQ.html
+2025-12-07 16:43:53,375 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:43:53,396 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责负责AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("泽达科技 | 用 AI 重塑产业逻辑我们是谁泽达科技（Z")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责负责AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("泽达科技 | 用 AI 重塑产业逻辑我们是谁泽达科技（Z")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:43:53,414 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:43:55,420 - __main__ - INFO - 获取第13/20个职位详情: 大模型应用工程师
+2025-12-07 16:43:55,420 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/81986e99ee669b5603Fz3t21EFZZ.html
+2025-12-07 16:44:00,662 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:00,686 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("【我们是谁？】→ 全球领先的仿真人形机器人研发制造销售一体化企业；上市公司，3轮融资累计约1亿元；深圳市专精特新企业，高新技术企业；欢迎加入人形机器人这个未来").first
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("深圳大象安泰科技有限公司招聘——加入仿真人形机器人赛道领军者，共创智能未来！【我们是谁？】→ 全球领先的仿真人形机器人研发制造销售一体化企业；上市公司，3")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("【我们是谁？】→ 全球领先的仿真人形机器人研发制造销售一体化企业；上市公司，3轮融资累计约1亿元；深圳市专精特新企业，高新技术企业；欢迎加入人形机器人这个未来").first
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("深圳大象安泰科技有限公司招聘——加入仿真人形机器人赛道领军者，共创智能未来！【我们是谁？】→ 全球领先的仿真人形机器人研发制造销售一体化企业；上市公司，3")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:44:00,701 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:44:02,703 - __main__ - INFO - 获取第14/20个职位详情: AI Agent 应用开发工程师
+2025-12-07 16:44:02,703 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/ad478a99ed81141703F_2Ni7GVtV.html
+2025-12-07 16:44:07,934 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:07,953 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("如能附上近 3 个月 Cursor、Claude Code")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("【公司介绍】我们正在打造全球首款面向电商商家的端到端 AI")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("如能附上近 3 个月 Cursor、Claude Code")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("【公司介绍】我们正在打造全球首款面向电商商家的端到端 AI")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:44:07,967 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:44:09,975 - __main__ - INFO - 获取第15/20个职位详情: AI应用开发工程师
+2025-12-07 16:44:09,975 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/7e697ef1a0b35faa03F_2d-5FVpY.html
+2025-12-07 16:44:15,497 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:15,517 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("职位描述：1）负责企业AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("深信服科技（证券代码300454）成立于2000年12")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("职位描述：1）负责企业AI")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("深信服科技（证券代码300454）成立于2000年12")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:44:15,532 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:44:17,540 - __main__ - INFO - 获取第16/20个职位详情: 高级ai工程师
+2025-12-07 16:44:17,540 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/eeb68cdb03346c2c03183du1FFZR.html
+2025-12-07 16:44:22,793 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:22,813 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责：1. 独立负责智能宠物硬件产品的AI")
+    2) <div class="job-sec-text fold-text">猫魔力是一家提供宠物智能产品的技术公司，专注于为宠物(优先做猫)全生活场景提供智能化解决方案。通过…</div> aka get_by_text("猫魔力是一家提供宠物智能产品的技术公司，专注于为宠物(优先做猫)全生活场景提供智能化解决方案。通过打造系列化服务机器人产品，帮助猫咪解决居家生活中吃/玩/住/行")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责：1. 独立负责智能宠物硬件产品的AI")
+    2) <div class="job-sec-text fold-text">猫魔力是一家提供宠物智能产品的技术公司，专注于为宠物(优先做猫)全生活场景提供智能化解决方案。通过…</div> aka get_by_text("猫魔力是一家提供宠物智能产品的技术公司，专注于为宠物(优先做猫)全生活场景提供智能化解决方案。通过打造系列化服务机器人产品，帮助猫咪解决居家生活中吃/玩/住/行")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:44:22,829 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:44:24,843 - __main__ - INFO - 获取第17/20个职位详情: AI agent 智能体大模型应用开发工程师
+2025-12-07 16:44:24,843 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/720efccf2ff1319f03F43N26E1tU.html
+2025-12-07 16:44:30,108 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:30,120 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:44:30,120 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:44:30,125 - modules.boss_zhipin - INFO - 提取到职位标题: AI agent 智能体大模型应用开发工程师
+2025-12-07 16:44:30,131 - modules.boss_zhipin - INFO - 提取到薪资: 25-50K·13薪
+2025-12-07 16:44:30,134 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:44:30,134 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:44:30,134 - modules.boss_zhipin - INFO - 成功提取职位详情: AI agent 智能体大模型应用开发工程师 - 
+2025-12-07 16:44:32,143 - __main__ - INFO - 获取第18/20个职位详情: 智能体AI工程师
+2025-12-07 16:44:32,143 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/80e23bda5e5afe6c031809q8FFdY.html
+2025-12-07 16:44:37,396 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:37,409 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:44:37,409 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:44:37,414 - modules.boss_zhipin - INFO - 提取到职位标题: 智能体AI工程师
+2025-12-07 16:44:37,420 - modules.boss_zhipin - INFO - 提取到薪资: 25-35K
+2025-12-07 16:44:37,422 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:44:37,422 - modules.boss_zhipin - INFO - 成功提取职位详情: 智能体AI工程师 - 
+2025-12-07 16:44:39,435 - __main__ - INFO - 获取第19/20个职位详情: 大模型算法实习生（客服方向）
+2025-12-07 16:44:39,435 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/f6d855f28ba5d2a5031z3du5E1VV.html
+2025-12-07 16:44:44,653 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:44,675 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责：支持大模型日常工作，如大模型框架调研、大模型相关开源方案技术实现等支持大模型在业务场景落地过程中的模块开发、数据挖掘、分析工作，如基于")
+    2) <div class="job-sec-text fold-text">货拉拉于2013年在中国香港创立（英文名为：Lalamove），2014年进入中国大陆和东南亚市场…</div> aka get_by_text("货拉拉于2013年在中国香港创立（英文名为：")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责：支持大模型日常工作，如大模型框架调研、大模型相关开源方案技术实现等支持大模型在业务场景落地过程中的模块开发、数据挖掘、分析工作，如基于")
+    2) <div class="job-sec-text fold-text">货拉拉于2013年在中国香港创立（英文名为：Lalamove），2014年进入中国大陆和东南亚市场…</div> aka get_by_text("货拉拉于2013年在中国香港创立（英文名为：")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:44:44,688 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:44:46,692 - __main__ - INFO - 获取第20/20个职位详情: 自然语言处理工程师（LLM/RAG/AI Agent）
+2025-12-07 16:44:46,692 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/9d0c67d1518b39b203Z90t28EFNY.html
+2025-12-07 16:44:51,933 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:44:51,956 - modules.boss_zhipin - ERROR - 获取职位详情失败: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责大模型应用开发：主导基于LLM")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("公司成立于2024年7")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+Traceback (most recent call last):
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\modules\boss_zhipin.py", line 532, in get_job_detail
+    html_content = job_desc_element.inner_html()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\sync_api\_generated.py", line 16995, in inner_html
+    self._sync(self._impl_obj.inner_html(timeout=timeout))
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_sync_base.py", line 115, in _sync
+    return task.result()
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_locator.py", line 450, in inner_html
+    return await self._frame.inner_html(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_frame.py", line 702, in inner_html
+    return await self._channel.send(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+  File "D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\.venv\lib\site-packages\playwright\_impl\_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.inner_html: Error: strict mode violation: locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text") resolved to 2 elements:
+    1) <div class="job-sec-text">…</div> aka get_by_text("岗位职责大模型应用开发：主导基于LLM")
+    2) <div class="job-sec-text fold-text">…</div> aka get_by_text("公司成立于2024年7")
+
+Call log:
+  - waiting for locator("div.job-box div.inner.home-inner div.job-detail div.job-detail-section div.job-sec-text")
+
+2025-12-07 16:44:51,978 - modules.boss_zhipin - INFO - 已保存错误页面HTML到error_detail_page.html，用于调试
+2025-12-07 16:44:51,979 - modules.boss_zhipin - INFO - 成功保存6个职位详情到: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jobs\boss_zhipin_jobs.json
+2025-12-07 16:44:51,980 - __main__ - INFO - 成功保存6个职位详情到: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jobs\boss_zhipin_jobs.json
+2025-12-07 16:44:51,980 - __main__ - INFO - 所有流程执行完成！
+2025-12-07 16:44:51,980 - __main__ - INFO - 浏览器保持打开状态，请手动关闭
+2025-12-07 16:44:51,981 - __main__ - INFO - 程序已完成所有操作，按回车键退出...
+2025-12-07 16:44:51,981 - __main__ - INFO - 用户已手动退出程序
+2025-12-07 16:45:51,728 - __main__ - INFO - 开始执行Boss直聘职位搜索流程
+2025-12-07 16:45:51,728 - __main__ - INFO - 步骤1: 登录Boss直聘
+2025-12-07 16:45:52,570 - modules.boss_zhipin - INFO - Playwright浏览器初始化成功
+2025-12-07 16:45:52,571 - modules.boss_zhipin - INFO - 登录信息（Cookie）加载成功
+2025-12-07 16:45:52,571 - modules.boss_zhipin - INFO - 检测到保存的登录Cookie，尝试恢复登录状态
+2025-12-07 16:45:54,624 - modules.boss_zhipin - INFO - 打开Boss直聘首页成功
+2025-12-07 16:45:54,627 - modules.boss_zhipin - INFO - 已添加保存的Cookie
+2025-12-07 16:46:00,618 - modules.boss_zhipin - INFO - 登录成功（使用保存的Cookie）
+2025-12-07 16:46:00,618 - __main__ - INFO - 步骤4: 搜索职位并保存详情
+2025-12-07 16:46:00,618 - __main__ - INFO - 搜索关键词: RAG
+2025-12-07 16:46:00,619 - modules.boss_zhipin - INFO - 开始搜索职位，关键词: RAG，城市: 北京，页码: 1
+2025-12-07 16:46:06,056 - modules.boss_zhipin - INFO - 模拟用户逐字输入关键词...
+2025-12-07 16:46:06,071 - modules.boss_zhipin - INFO - 使用定位器 //input[@placeholder="搜索职位、公司"] 找到搜索输入框
+2025-12-07 16:46:08,086 - modules.boss_zhipin - INFO - 模拟用户点击搜索按钮...
+2025-12-07 16:46:08,089 - modules.boss_zhipin - INFO - 使用定位器 //a[@ka="job_search_btn_click"] 找到搜索按钮
+2025-12-07 16:46:15,127 - modules.boss_zhipin - INFO - 提取搜索结果...
+2025-12-07 16:46:15,133 - modules.boss_zhipin - INFO - 使用定位器 li.job-card-box 找到 30 个职位卡片
+2025-12-07 16:46:15,156 - modules.boss_zhipin - INFO - 提取职位: AI人工智能开发工程师 - FOSHO自在必得科技
+2025-12-07 16:46:15,177 - modules.boss_zhipin - INFO - 提取职位: 高级ai算法工程师 - 潮隐人工智能
+2025-12-07 16:46:15,200 - modules.boss_zhipin - INFO - 提取职位: 大模型算法工程师-RAG/智能体方向 - 北京某中型人工智能公司
+2025-12-07 16:46:15,223 - modules.boss_zhipin - INFO - 提取职位: 大模型开发实习生（Agent/RAG/Fine-tune） - 千芯科技
+2025-12-07 16:46:15,244 - modules.boss_zhipin - INFO - 提取职位: AI 应用开发工程师 - 某大型计算机硬件上市公司
+2025-12-07 16:46:15,268 - modules.boss_zhipin - INFO - 提取职位: AI应用工程师 - 和生创新技术
+2025-12-07 16:46:15,304 - modules.boss_zhipin - INFO - 提取职位: 算法工程师（RAG与智能体方向） - 共济科技
+2025-12-07 16:46:15,333 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师 - 华翌科技
+2025-12-07 16:46:15,359 - modules.boss_zhipin - INFO - 提取职位: AI应用开发工程师（机器人 & Agent方向） - 聆海
+2025-12-07 16:46:15,388 - modules.boss_zhipin - INFO - 提取职位: 算法工程师（RAG，六险一金，双休） - 智现未来
+2025-12-07 16:46:15,412 - modules.boss_zhipin - INFO - 提取职位: 智能体AI工程师 - 某大型智能硬件公司
+2025-12-07 16:46:15,441 - modules.boss_zhipin - INFO - 提取职位: AI 工程师（Prompt / LLM） - 金海盛潮
+2025-12-07 16:46:15,467 - modules.boss_zhipin - INFO - 提取职位: ai高级算法工程师 - 泽荙科技
+2025-12-07 16:46:15,492 - modules.boss_zhipin - INFO - 提取职位: AI agent 智能体大模型应用开发工程师 - 某中型计算机软件公司
+2025-12-07 16:46:15,516 - modules.boss_zhipin - INFO - 提取职位: AI Agent 应用开发工程师 - 自下而上
+2025-12-07 16:46:15,535 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师 - 大象安泰
+2025-12-07 16:46:15,557 - modules.boss_zhipin - INFO - 提取职位: AI应用开发工程师 - 深信服科技
+2025-12-07 16:46:15,580 - modules.boss_zhipin - INFO - 提取职位: 高级ai工程师 - 猫魔力
+2025-12-07 16:46:15,605 - modules.boss_zhipin - INFO - 提取职位: 大模型算法实习生（客服方向） - 货拉拉科技
+2025-12-07 16:46:15,626 - modules.boss_zhipin - INFO - 提取职位: AI Agent开发工程师 - 开思时代
+2025-12-07 16:46:15,647 - modules.boss_zhipin - INFO - 提取职位: 自然语言处理工程师（LLM/RAG/AI Agent） - 深圳影智创思科技
+2025-12-07 16:46:15,666 - modules.boss_zhipin - INFO - 提取职位: 算法工程师 - 跃瓦创新
+2025-12-07 16:46:15,687 - modules.boss_zhipin - INFO - 提取职位: 算法实习生（模型后训练 & 数据合成方向） - 深圳可触未来创新科技
+2025-12-07 16:46:15,705 - modules.boss_zhipin - INFO - 提取职位: 106-RAG算法优化工程师 - 深圳某大型互联网基金管理上市公司
+2025-12-07 16:46:15,725 - modules.boss_zhipin - INFO - 提取职位: 大模型应用开发工程师RAG/Agent+LangChain - 北京金道天成信息
+2025-12-07 16:46:15,744 - modules.boss_zhipin - INFO - 提取职位: 大模型应用工程师 - 微创软件
+2025-12-07 16:46:15,764 - modules.boss_zhipin - INFO - 提取职位: AI应用软件工程师 - 摩罗志远
+2025-12-07 16:46:15,784 - modules.boss_zhipin - INFO - 提取职位: Agent 算法工程师（实习） - 深度赋智
+2025-12-07 16:46:15,805 - modules.boss_zhipin - INFO - 提取职位: 高级AI应用开发工程师 - 灵犀汇联
+2025-12-07 16:46:15,826 - modules.boss_zhipin - INFO - 提取职位: RAG应用&搜索大模型增强开发工程师 - 华为技术有限公司
+2025-12-07 16:46:15,826 - modules.boss_zhipin - INFO - 搜索完成，找到30个相关职位
+2025-12-07 16:46:15,827 - __main__ - INFO - 开始获取前20个职位的详情
+2025-12-07 16:46:15,827 - __main__ - INFO - 获取第1/20个职位详情: AI人工智能开发工程师
+2025-12-07 16:46:15,827 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/c0c867788d8837a01Hd93N60FlZQ.html
+2025-12-07 16:46:21,105 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:46:21,115 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:46:21,116 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:46:21,121 - modules.boss_zhipin - INFO - 提取到职位标题: AI人工智能开发工程师
+2025-12-07 16:46:21,128 - modules.boss_zhipin - INFO - 提取到薪资: 10-15K
+2025-12-07 16:46:21,130 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:46:21,131 - modules.boss_zhipin - INFO - 成功提取职位详情: AI人工智能开发工程师 - 
+2025-12-07 16:46:23,136 - __main__ - INFO - 获取第2/20个职位详情: 高级ai算法工程师
+2025-12-07 16:46:23,136 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/09f7d52f48cd9a5003xy2N60GFBY.html
+2025-12-07 16:46:28,375 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:46:28,385 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:46:28,386 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:46:28,392 - modules.boss_zhipin - INFO - 提取到职位标题: 高级ai算法工程师
+2025-12-07 16:46:28,399 - modules.boss_zhipin - INFO - 提取到薪资: 20-40K·13薪
+2025-12-07 16:46:28,401 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:46:28,401 - modules.boss_zhipin - INFO - 成功提取职位详情: 高级ai算法工程师 - 
+2025-12-07 16:46:30,408 - __main__ - INFO - 获取第3/20个职位详情: 大模型算法工程师-RAG/智能体方向
+2025-12-07 16:46:30,409 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/06486c650e2085d2031729q5EFZY.html
+2025-12-07 16:46:35,641 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:46:35,651 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:46:35,652 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:46:35,658 - modules.boss_zhipin - INFO - 提取到职位标题: 大模型算法工程师-RAG/智能体方向
+2025-12-07 16:46:35,666 - modules.boss_zhipin - INFO - 提取到薪资: 40-70K·15薪
+2025-12-07 16:46:35,669 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:46:35,669 - modules.boss_zhipin - INFO - 成功提取职位详情: 大模型算法工程师-RAG/智能体方向 - 
+2025-12-07 16:46:37,683 - __main__ - INFO - 获取第4/20个职位详情: 大模型开发实习生（Agent/RAG/Fine-tune）
+2025-12-07 16:46:37,683 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/be6607789f5bea471Hxy2dy4E1dW.html
+2025-12-07 16:46:42,993 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:46:43,002 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:46:43,003 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:46:43,009 - modules.boss_zhipin - INFO - 提取到职位标题: 大模型开发实习生（Agent/RAG/Fine-tune）
+2025-12-07 16:46:43,016 - modules.boss_zhipin - INFO - 提取到薪资: 200-350元/天
+2025-12-07 16:46:43,020 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:46:43,020 - modules.boss_zhipin - INFO - 成功分离工作内容
+2025-12-07 16:46:43,020 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:46:43,020 - modules.boss_zhipin - INFO - 成功提取职位详情: 大模型开发实习生（Agent/RAG/Fine-tune） - 
+2025-12-07 16:46:45,033 - __main__ - INFO - 获取第5/20个职位详情: AI 应用开发工程师
+2025-12-07 16:46:45,033 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/cec063a78ad0252d031429S1GVRQ.html
+2025-12-07 16:46:50,291 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:46:50,301 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:46:50,302 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:46:50,306 - modules.boss_zhipin - INFO - 提取到职位标题: AI 应用开发工程师
+2025-12-07 16:46:50,314 - modules.boss_zhipin - INFO - 提取到薪资: 20-21K
+2025-12-07 16:46:50,316 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:46:50,316 - modules.boss_zhipin - INFO - 成功提取职位详情: AI 应用开发工程师 - 
+2025-12-07 16:46:52,327 - __main__ - INFO - 获取第6/20个职位详情: AI应用工程师
+2025-12-07 16:46:52,327 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/fdd33978c666175e03Jy29y-ElRZ.html
+2025-12-07 16:46:57,565 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:46:57,574 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:46:57,574 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:46:57,579 - modules.boss_zhipin - INFO - 提取到职位标题: AI应用工程师
+2025-12-07 16:46:57,586 - modules.boss_zhipin - INFO - 提取到薪资: 15-25K·13薪
+2025-12-07 16:46:57,588 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:46:57,588 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:46:57,588 - modules.boss_zhipin - INFO - 成功提取职位详情: AI应用工程师 - 
+2025-12-07 16:46:59,596 - __main__ - INFO - 获取第7/20个职位详情: 算法工程师（RAG与智能体方向）
+2025-12-07 16:46:59,596 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/6c544bb1f51e52bd03x43dW5EFBQ.html
+2025-12-07 16:47:04,833 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:04,843 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:04,843 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:04,847 - modules.boss_zhipin - INFO - 提取到职位标题: 算法工程师（RAG与智能体方向）
+2025-12-07 16:47:04,854 - modules.boss_zhipin - INFO - 提取到薪资: 20-40K
+2025-12-07 16:47:04,856 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:04,857 - modules.boss_zhipin - INFO - 成功提取职位详情: 算法工程师（RAG与智能体方向） - 
+2025-12-07 16:47:06,867 - __main__ - INFO - 获取第8/20个职位详情: 大模型应用开发工程师
+2025-12-07 16:47:06,867 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/71c2d46f1b5a5cfd03d539-1EVRX.html
+2025-12-07 16:47:12,096 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:12,105 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:12,105 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:12,110 - modules.boss_zhipin - INFO - 提取到职位标题: 大模型应用开发工程师
+2025-12-07 16:47:12,118 - modules.boss_zhipin - INFO - 提取到薪资: 15-25K
+2025-12-07 16:47:12,120 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:12,120 - modules.boss_zhipin - INFO - 成功提取职位详情: 大模型应用开发工程师 - 
+2025-12-07 16:47:14,134 - __main__ - INFO - 获取第9/20个职位详情: AI应用开发工程师（机器人 & Agent方向）
+2025-12-07 16:47:14,134 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/d3adf9ce3a07f42e031939q1FVRS.html
+2025-12-07 16:47:19,364 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:19,374 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:19,375 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:19,380 - modules.boss_zhipin - INFO - 提取到职位标题: AI应用开发工程师（机器人 & Agent方向）
+2025-12-07 16:47:19,386 - modules.boss_zhipin - INFO - 提取到薪资: 20-30K
+2025-12-07 16:47:19,388 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:19,388 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:47:19,389 - modules.boss_zhipin - INFO - 成功提取职位详情: AI应用开发工程师（机器人 & Agent方向） - 
+2025-12-07 16:47:21,393 - __main__ - INFO - 获取第10/20个职位详情: 算法工程师（RAG，六险一金，双休）
+2025-12-07 16:47:21,393 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/fa2e4dbdced81e1503162t20FVtR.html
+2025-12-07 16:47:26,664 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:26,674 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:26,674 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:26,680 - modules.boss_zhipin - INFO - 提取到职位标题: 算法工程师（RAG，六险一金，双休）
+2025-12-07 16:47:26,688 - modules.boss_zhipin - INFO - 提取到薪资: 20-40K·14薪
+2025-12-07 16:47:26,690 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:26,691 - modules.boss_zhipin - INFO - 成功提取职位详情: 算法工程师（RAG，六险一金，双休） - 
+2025-12-07 16:47:28,701 - __main__ - INFO - 获取第11/20个职位详情: 智能体AI工程师
+2025-12-07 16:47:28,701 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/80e23bda5e5afe6c031809q8FFdY.html
+2025-12-07 16:47:34,025 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:34,035 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:34,035 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:34,042 - modules.boss_zhipin - INFO - 提取到职位标题: 智能体AI工程师
+2025-12-07 16:47:34,049 - modules.boss_zhipin - INFO - 提取到薪资: 25-35K
+2025-12-07 16:47:34,052 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:34,052 - modules.boss_zhipin - INFO - 成功提取职位详情: 智能体AI工程师 - 
+2025-12-07 16:47:36,063 - __main__ - INFO - 获取第12/20个职位详情: AI 工程师（Prompt / LLM）
+2025-12-07 16:47:36,063 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/765f9ace44b4d610031929u0FVNT.html
+2025-12-07 16:47:41,279 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:41,290 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:41,290 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:41,297 - modules.boss_zhipin - INFO - 提取到职位标题: AI 工程师（Prompt / LLM）
+2025-12-07 16:47:41,303 - modules.boss_zhipin - INFO - 提取到薪资: 20-35K
+2025-12-07 16:47:41,306 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:41,306 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:47:41,306 - modules.boss_zhipin - INFO - 成功提取职位详情: AI 工程师（Prompt / LLM） - 
+2025-12-07 16:47:43,321 - __main__ - INFO - 获取第13/20个职位详情: ai高级算法工程师
+2025-12-07 16:47:43,321 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/3913f9e0e88fc61603x_39i_FVNQ.html
+2025-12-07 16:47:48,555 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:48,565 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:48,565 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:48,571 - modules.boss_zhipin - INFO - 提取到职位标题: ai高级算法工程师
+2025-12-07 16:47:48,578 - modules.boss_zhipin - INFO - 提取到薪资: 18-25K
+2025-12-07 16:47:48,581 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:48,582 - modules.boss_zhipin - INFO - 成功提取职位详情: ai高级算法工程师 - 
+2025-12-07 16:47:50,589 - __main__ - INFO - 获取第14/20个职位详情: AI agent 智能体大模型应用开发工程师
+2025-12-07 16:47:50,589 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/720efccf2ff1319f03F43N26E1tU.html
+2025-12-07 16:47:55,835 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:47:55,845 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:47:55,846 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:47:55,850 - modules.boss_zhipin - INFO - 提取到职位标题: AI agent 智能体大模型应用开发工程师
+2025-12-07 16:47:55,865 - modules.boss_zhipin - INFO - 提取到薪资: 25-50K·13薪
+2025-12-07 16:47:55,868 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:47:55,868 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:47:55,868 - modules.boss_zhipin - INFO - 成功提取职位详情: AI agent 智能体大模型应用开发工程师 - 
+2025-12-07 16:47:57,872 - __main__ - INFO - 获取第15/20个职位详情: AI Agent 应用开发工程师
+2025-12-07 16:47:57,872 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/ad478a99ed81141703F_2Ni7GVtV.html
+2025-12-07 16:48:03,099 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:48:03,111 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:48:03,111 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:48:03,118 - modules.boss_zhipin - INFO - 提取到职位标题: AI Agent 应用开发工程师
+2025-12-07 16:48:03,126 - modules.boss_zhipin - INFO - 提取到薪资: 40-70K
+2025-12-07 16:48:03,128 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:48:03,128 - modules.boss_zhipin - INFO - 成功提取职位详情: AI Agent 应用开发工程师 - 
+2025-12-07 16:48:05,142 - __main__ - INFO - 获取第16/20个职位详情: 大模型应用工程师
+2025-12-07 16:48:05,142 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/81986e99ee669b5603Fz3t21EFZZ.html
+2025-12-07 16:48:10,380 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:48:10,390 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:48:10,390 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:48:10,395 - modules.boss_zhipin - INFO - 提取到职位标题: 大模型应用工程师
+2025-12-07 16:48:10,401 - modules.boss_zhipin - INFO - 提取到薪资: 12-15K
+2025-12-07 16:48:10,404 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:48:10,404 - modules.boss_zhipin - INFO - 成功分离工作内容
+2025-12-07 16:48:10,404 - modules.boss_zhipin - INFO - 成功提取职位详情: 大模型应用工程师 - 
+2025-12-07 16:48:12,412 - __main__ - INFO - 获取第17/20个职位详情: AI应用开发工程师
+2025-12-07 16:48:12,412 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/7e697ef1a0b35faa03F_2d-5FVpY.html
+2025-12-07 16:48:17,664 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:48:17,674 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:48:17,674 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:48:17,679 - modules.boss_zhipin - INFO - 提取到职位标题: AI应用开发工程师
+2025-12-07 16:48:17,686 - modules.boss_zhipin - INFO - 提取到薪资: 25-50K·15薪
+2025-12-07 16:48:17,688 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:48:17,689 - modules.boss_zhipin - INFO - 成功提取职位详情: AI应用开发工程师 - 
+2025-12-07 16:48:19,704 - __main__ - INFO - 获取第18/20个职位详情: 高级ai工程师
+2025-12-07 16:48:19,704 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/eeb68cdb03346c2c03183du1FFZR.html
+2025-12-07 16:48:24,936 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:48:24,947 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:48:24,948 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:48:24,953 - modules.boss_zhipin - INFO - 提取到职位标题: 高级ai工程师
+2025-12-07 16:48:24,960 - modules.boss_zhipin - INFO - 提取到薪资: 15-30K
+2025-12-07 16:48:24,962 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:48:24,963 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:48:24,963 - modules.boss_zhipin - INFO - 成功提取职位详情: 高级ai工程师 - 
+2025-12-07 16:48:26,977 - __main__ - INFO - 获取第19/20个职位详情: 大模型算法实习生（客服方向）
+2025-12-07 16:48:26,977 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/f6d855f28ba5d2a5031z3du5E1VV.html
+2025-12-07 16:48:32,195 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:48:32,205 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:48:32,205 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:48:32,211 - modules.boss_zhipin - INFO - 提取到职位标题: 大模型算法实习生（客服方向）
+2025-12-07 16:48:32,218 - modules.boss_zhipin - INFO - 提取到薪资: 200-250元/天
+2025-12-07 16:48:32,221 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:48:32,221 - modules.boss_zhipin - INFO - 成功分离岗位要求
+2025-12-07 16:48:32,221 - modules.boss_zhipin - INFO - 成功提取职位详情: 大模型算法实习生（客服方向） - 
+2025-12-07 16:48:34,224 - __main__ - INFO - 获取第20/20个职位详情: AI Agent开发工程师
+2025-12-07 16:48:34,225 - modules.boss_zhipin - INFO - 打开职位详情页面: https://www.zhipin.com/job_detail/d99fa81d310bdda2031_2Nq5EVJW.html
+2025-12-07 16:48:39,445 - modules.boss_zhipin - INFO - 使用精确定位器提取职位描述...
+2025-12-07 16:48:39,454 - modules.boss_zhipin - INFO - 获取到职位描述HTML内容
+2025-12-07 16:48:39,455 - modules.boss_zhipin - INFO - 成功提取并处理职位描述
+2025-12-07 16:48:39,460 - modules.boss_zhipin - INFO - 提取到职位标题: AI Agent开发工程师
+2025-12-07 16:48:39,468 - modules.boss_zhipin - INFO - 提取到薪资: 15-22K
+2025-12-07 16:48:39,471 - modules.boss_zhipin - INFO - 开始分离工作内容和岗位要求...
+2025-12-07 16:48:39,471 - modules.boss_zhipin - INFO - 成功提取职位详情: AI Agent开发工程师 - 
+2025-12-07 16:48:39,472 - modules.boss_zhipin - INFO - 成功保存20个职位详情到: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jobs\boss_zhipin_jobs.json
+2025-12-07 16:48:39,472 - __main__ - INFO - 成功保存20个职位详情到: D:\workspace\github\auto_boss_qichacha\auto_boss_qichacha\data\jobs\boss_zhipin_jobs.json
+2025-12-07 16:48:39,472 - __main__ - INFO - 所有流程执行完成！
+2025-12-07 16:48:39,472 - __main__ - INFO - 浏览器保持打开状态，请手动关闭
+2025-12-07 16:48:39,472 - __main__ - INFO - 程序已完成所有操作，按回车键退出...
