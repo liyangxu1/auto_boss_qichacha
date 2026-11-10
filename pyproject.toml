@@ -1,17 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "auto-boss-qichacha"
+name = "autoboss"
 version = "0.1.0"
-description = "Auto Boss Zhipin job search based on resume analysis"
-readme = "README.md"
-requires-python = ">=3.10"
-dependencies = [
-    "openai>=1.0.0",
-    "python-dotenv>=1.0.0",
-    "playwright>=1.30.0",
-    "PyPDF2>=3.0.0",
-    "beautifulsoup4>=4.12.0"
-]
+description = "PDF 简历结构化解析与求职分析"
+requires-python = ">=3.11"
+dependencies = ["pdfplumber>=0.11,<0.12", "pypdf>=6,<7", "pydantic>=2.10,<3", "patchright==1.62.1", "fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.20,<1"]
+
+[project.scripts]
+autoboss = "autoboss.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["modules*"]
-exclude = ["tests*", "data*", "config*"]
+include = ["autoboss*"]
+
+[tool.setuptools.package-data]
+"autoboss.web" = ["static/*", "static/assets/*"]

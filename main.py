@@ -1,182 +1,121 @@
-#!/usr/bin/env python3
-"""
-主程序入口，实现完整的Boss直聘职位搜索和自动沟通流程
+"""项目启动入口，保留简历解析与采集函数供手动调试。"""
 
-核心流程：
-1. 登录Boss直聘
-2. 解析简历
-3. 用AI提取简历内容生成搜索关键词
-4. 根据关键词搜索职位
-5. 计算简历与职位的匹配度
-6. 匹配度>=80%的职位自动点击"立即沟通"
-7. 保存所有结果到文件
-"""
-
-import os
-import sys
-import logging
 import json
+import os
 import time
-from modules.boss_zhipin import BossZhipinClient
-from modules.resume_parser import parse_resume
-from modules.ai_keyword_extractor import AIKeywordExtractor
-from modules.job_matcher import JobMatcher
+from pathlib import Path
 
-# 配置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+from autoboss.common.config import AIConfig, read_env_file
+from autoboss.common.llm import JSONClient
+from autoboss.boss.service import CollectOptions, collect_jobs
+from autoboss.resume.markdown import resume_to_markdown
+from autoboss.resume.search_profile import generate_search_to_files
+from autoboss.resume.service import analyze_to_file, extract_to_files, load_source
 
-def main():
-    """
-    主程序入口 - 完整自动化流程
-    """
-    logger.info('开始执行Boss直聘职位搜索和自动沟通流程')
-    exit_code = 0
-    boss_client = None
-    
-    try:
-        # 1. 登录Boss直聘
-        logger.info('步骤1: 登录Boss直聘')
-        boss_client = BossZhipinClient(headless=False)  # 不使用无头模式，便于用户手动登录
-        
-        login_success = boss_client.login()
-        if not login_success:
-            logger.error('登录失败，程序终止')
-            return 1
-        
-        # 2. 解析简历
-        logger.info('步骤2: 解析简历')
-        resume_path = os.path.join(os.path.dirname(__file__), 'data', 'jianli', '李阳旭-AI应用开发工程师-1年.pdf')
-        if not os.path.exists(resume_path):
-            logger.error(f'简历文件不存在: {resume_path}')
-            return 2
-        
-        resume_info = parse_resume(resume_path)
-        if not resume_info or 'content' not in resume_info:
-            logger.error('解析简历失败')
-            return 3
-        
-        logger.info(f'成功解析简历: {resume_info["file_path"]}')
-        
-        # 3. 用AI提取简历内容生成搜索关键词
-        logger.info('步骤3: AI提取搜索关键词')
-        try:
-            extractor = AIKeywordExtractor()
-            keywords = extractor.extract_keywords(resume_info['content'])
-            if not keywords:
-                logger.warning('未提取到关键词，使用大模型相关默认关键词')
-                keywords = ['RAG', 'Agent', 'AI工程师', '大模型', 'LLM', 'AIGC', '人工智能', '机器学习工程师', '深度学习', '自然语言处理', 'NLP']
-            else:
-                # 确保包含大模型相关关键词
-                ai_keywords = ['RAG', 'Agent', 'AI工程师', '大模型', 'LLM', 'AIGC', '人工智能', '机器学习工程师', '深度学习', '自然语言处理', 'NLP']
-                keywords.extend([kw for kw in ai_keywords if kw not in keywords])
-            logger.info(f'AI提取的关键词: {keywords}')
-        except Exception as e:
-            logger.error(f'AI关键词提取失败，使用大模型相关默认关键词: {e}')
-            keywords = ['RAG', 'Agent', 'AI工程师', '大模型', 'LLM', 'AIGC', '人工智能', '机器学习工程师', '深度学习', '自然语言处理', 'NLP']
-        
-        # 4. 创建职位匹配器
-        logger.info('步骤4: 创建职位匹配器')
-        job_matcher = JobMatcher()
-        
-        # 5. 搜索职位并计算匹配度
-        logger.info('步骤5: 搜索职位并计算匹配度')
-        
-        all_job_details = []
-        auto_chat_count = 0
-        
-        # 使用多个关键词搜索 - 使用大模型相关关键词
-        for keyword in keywords[:3]:  # 只使用前3个关键词
-            logger.info(f'搜索关键词: {keyword}')
-            jobs = boss_client.search_jobs(keyword, city="北京", page=1)
-            
-            if not jobs:
-                logger.warning(f'关键词"{keyword}"未搜索到职位')
-                continue
-            
-            logger.info(f'关键词"{keyword}"找到{len(jobs)}个职位')
-            
-            # 处理每个职位
-            max_jobs = min(2, len(jobs))  # 每个关键词最多处理2个职位（测试用）
-            logger.info(f'开始处理前{max_jobs}个职位')
-            
-            for i in range(max_jobs):
-                job = jobs[i]
-                logger.info(f'处理第{i+1}/{max_jobs}个职位: {job["title"]}')
-                
-                try:
-                    # 获取职位详情并计算匹配度
-                    detail = boss_client.get_job_detail_and_match(job["link"], resume_info, job_matcher)
-                    if detail:
-                        all_job_details.append(detail)
-                        
-                        # 统计自动沟通次数
-                        if detail.get('auto_chat_clicked', False):
-                            auto_chat_count += 1
-                            logger.info(f'已自动发起沟通，当前总计: {auto_chat_count}个职位')
-                    
-                    # 避免请求过快
-                    if i < max_jobs - 1:
-                        time.sleep(2)
-                        
-                except Exception as e:
-                    logger.error(f'处理职位失败: {e}')
-                    continue
-        
-        # 6. 保存结果
-        logger.info('步骤6: 保存结果')
-        output_dir = os.path.join(os.path.dirname(__file__), 'data', 'jobs')
-        os.makedirs(output_dir, exist_ok=True)
-        
-        # 保存详细结果
-        detailed_output_file = os.path.join(output_dir, 'boss_zhipin_jobs_with_match.json')
-        if boss_client.save_job_details(all_job_details, detailed_output_file):
-            logger.info(f'成功保存{len(all_job_details)}个职位详情到: {detailed_output_file}')
-        else:
-            logger.error('保存职位详情失败')
-            exit_code = 5
-        
-        # 保存统计结果
-        stats = {
-            'total_jobs_processed': len(all_job_details),
-            'auto_chat_initiated': auto_chat_count,
-            'high_match_jobs': len([job for job in all_job_details if job.get('match_result', {}).get('overall_score', 0) >= 80]),
-            'medium_match_jobs': len([job for job in all_job_details if 60 <= job.get('match_result', {}).get('overall_score', 0) < 80]),
-            'low_match_jobs': len([job for job in all_job_details if job.get('match_result', {}).get('overall_score', 0) < 60])
-        }
-        
-        stats_output_file = os.path.join(output_dir, 'job_match_stats.json')
-        with open(stats_output_file, 'w', encoding='utf-8') as f:
-            json.dump(stats, f, ensure_ascii=False, indent=2)
-        
-        logger.info('=== 执行结果统计 ===')
-        logger.info(f'处理职位总数: {stats["total_jobs_processed"]}')
-        logger.info(f'自动发起沟通: {stats["auto_chat_initiated"]}')
-        logger.info(f'高匹配度职位(>=80%): {stats["high_match_jobs"]}')
-        logger.info(f'中等匹配度职位(60-80%): {stats["medium_match_jobs"]}')
-        logger.info(f'低匹配度职位(<60%): {stats["low_match_jobs"]}')
-        
-        logger.info('所有流程执行完成！')
-        
-    except Exception as e:
-        logger.error(f'程序执行出错: {e}', exc_info=True)
-        exit_code = -1
-    
-    finally:
-        # 清理资源
-        if boss_client:
-            logger.info('浏览器保持打开状态，请手动关闭')
-            logger.info('程序已完成所有操作，按回车键退出...')
-            
-            try:
-                input()
-            except KeyboardInterrupt:
-                pass
-            
-            logger.info('用户已手动退出程序')
-    
-    return exit_code
+
+PROJECT_DIR = Path(__file__).resolve().parent
+PDF_FILE = Path(os.environ.get("AUTOBOSS_PDF_FILE", PROJECT_DIR / "input/resume.pdf"))
+OUTPUT_DIR = PROJECT_DIR / "data" / "test-resume"
+TEXT_FILE = OUTPUT_DIR / "extracted" / "text.txt"
+JSON_FILE = OUTPUT_DIR / "resume.json"
+SEARCH_FILE = OUTPUT_DIR / "boss-search.ai.json"
+SEARCH_PREFERENCES_FILE = OUTPUT_DIR / "search-preferences.json"
+BOSS_OUTPUT_DIR = PROJECT_DIR / "data" / "boss"
+BOSS_PROFILE_DIR = PROJECT_DIR / "data" / "browser" / "boss"
+# 每轮和单次总量设上限，先采集岗位与公司信息。
+BOSS_OPTIONS = CollectOptions(max_jobs_per_search=5, max_jobs_total=30)
+
+# 环境变量优先，其次读取项目根目录的 .env；也可以直接修改下面的变量。
+ENV_FILE = PROJECT_DIR / ".env"
+MODEL_ENV = {**(read_env_file(ENV_FILE) if ENV_FILE.is_file() else {}), **os.environ}
+API_KEY = MODEL_ENV.get("OPENAI_API_KEY", "")
+MODEL = MODEL_ENV.get("OPENAI_MODEL", "")
+BASE_URL = MODEL_ENV.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
+API_FORMAT = MODEL_ENV.get("OPENAI_API_FORMAT", "responses")
+# 兼容接口不支持严格结构化输出时，在 .env 中开启 OPENAI_JSON_MODE。
+JSON_MODE = MODEL_ENV.get("OPENAI_JSON_MODE", "false").lower() in {"true", "1", "yes"}
+TIMEOUT = float(MODEL_ENV.get("OPENAI_TIMEOUT", "300"))
+
+
+def pdf_to_text() -> str:
+    """第一步：只读取 PDF 文字，保存到本地，不调用 AI。"""
+    source = extract_to_files(PDF_FILE, TEXT_FILE.parent, force=True)
+    text = TEXT_FILE.read_text(encoding="utf-8")
+    print(f"已提取 {source.page_count} 页，文字保存在：{TEXT_FILE}")
+    print(text)
+    return text
+
+
+def text_to_json() -> dict:
+    """第二步：读取已有文字，由 AI 分析后保存简历 JSON。"""
+    if not TEXT_FILE.is_file():
+        raise ValueError("还没有简历文字，请先运行 pdf_to_text()。")
+    if not API_KEY or not MODEL:
+        raise ValueError("请先在 .env 或 main.py 中填写 API_KEY 和 MODEL。")
+    source = load_source(TEXT_FILE)
+    config = AIConfig(key=API_KEY, model=MODEL, base_url=BASE_URL,
+                      api_format=API_FORMAT, json_mode=JSON_MODE, timeout=TIMEOUT)
+    print(f"正在调用 {MODEL} 分析 {source.page_count} 页简历，等待限制 {TIMEOUT:g} 秒……", flush=True)
+    started = time.perf_counter()
+    result = analyze_to_file(source, JSON_FILE, JSONClient(config), force=True)
+    print(f"AI 分析与校验完成，耗时 {time.perf_counter() - started:.1f} 秒。", flush=True)
+    print(f"简历 JSON 保存在：{JSON_FILE}")
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return result
+
+
+def generate_boss_search(json_file: Path = JSON_FILE) -> dict:
+    """由 AI 读取已有简历 JSON，生成城市、关键词和经验筛选。"""
+    preferences = (json.loads(SEARCH_PREFERENCES_FILE.read_text(encoding="utf-8-sig"))
+                   if SEARCH_PREFERENCES_FILE.is_file() else {})
+    config = AIConfig(key=API_KEY, model=MODEL, base_url=BASE_URL,
+                      api_format=API_FORMAT, json_mode=JSON_MODE, timeout=TIMEOUT)
+    if not config.key or not config.model:
+        raise ValueError("请先在 .env 或 main.py 中填写 API_KEY 和 MODEL。")
+    print(f"正在调用 {MODEL} 生成 BOSS 搜索条件……", flush=True)
+    started = time.perf_counter()
+    result = generate_search_to_files(json_file, SEARCH_FILE, JSONClient(config),
+                                      preferences=preferences, force=True)
+    print(f"搜索条件生成完成，耗时 {time.perf_counter() - started:.1f} 秒。", flush=True)
+    print(f"搜索 JSON：{SEARCH_FILE}\n填写清单：{SEARCH_FILE.with_suffix('.md')}")
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return result
+
+
+def collect_boss_jobs(options: CollectOptions | None = None) -> list[dict]:
+    """读取 AI 搜索条件，在 BOSS 搜索并采集岗位、公司，不执行沟通或投递。"""
+    report = collect_jobs(SEARCH_FILE, BOSS_OUTPUT_DIR, BOSS_PROFILE_DIR, options=options or BOSS_OPTIONS)
+    print(f"BOSS 采集状态：{report['status']}；岗位 {report['job_count']}；公司 {report['company_count']}")
+    print(f"结果目录：{report['output_dir']}")
+    jobs_file = Path(report["output_dir"]) / "jobs.json"
+    print(f"岗位列表：{jobs_file}")
+    return json.loads(jobs_file.read_text(encoding="utf-8"))
+
+
+def json_to_markdown(json_file: Path = JSON_FILE) -> str:
+    """第三步：把已有 JSON 转成 方便 阅读的 Markdown，不调用 AI。"""
+    json_file = Path(json_file)
+    resume = json.loads(json_file.read_text(encoding="utf-8-sig"))
+    text = resume_to_markdown(resume)
+    output = json_file.with_suffix(".md")
+    output.write_text(text, encoding="utf-8")
+    print(f"Markdown文档保存在：{output}")
+    return text
+
+
+def start_app() -> None:
+    """启动后台工作台；已经运行时复用服务并显示访问地址。"""
+    from autoboss.web.server import main as manage_web
+
+    manage_web(["start"])
+
 
 if __name__ == "__main__":
-    sys.exit(main())
+    start_app()
 
+    # 单独调试时，注释掉上面的启动调用，再按需运行以下函数。
+    # pdf_to_text()
+    # text_to_json()
+    # generate_boss_search()
+    # collect_boss_jobs()
+    # json_to_markdown()

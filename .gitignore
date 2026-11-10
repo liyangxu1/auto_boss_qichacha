@@ -1,0 +1,17 @@
+get_jobs/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+input/
+output/
+tmp/
+data/
+*.egg-info/
+build/
+dist/
+node_modules/
